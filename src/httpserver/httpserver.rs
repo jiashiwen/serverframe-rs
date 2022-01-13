@@ -44,6 +44,7 @@ impl HttpServer {
         let handle = spawn(async {
             server.await.unwrap();
         });
+        log::info!("httpserver start");
         return handle;
     }
 }

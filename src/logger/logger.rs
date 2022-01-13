@@ -20,7 +20,7 @@ pub fn init_log() {
         CompoundPolicy::new(Box::new(size_trigger), Box::new(fixed_window_roller));
     let rolling_file = RollingFileAppender::builder()
         .encoder(Box::new(PatternEncoder::new("{d} - {m}{n}")))
-        .build("log/app.log", Box::new(compound_policy))
+        .build("logs/app.log", Box::new(compound_policy))
         .unwrap();
 
     let file_out = FileAppender::builder()
@@ -28,6 +28,10 @@ pub fn init_log() {
         .build("logs/app.log")
         .unwrap();
     let stdout = ConsoleAppender::builder().build();
+
+    // let appender_rolling = Appender::builder().build("rolling_file", Box::new(rolling_file));
+    // let appender_file = Appender::builder().build("file_out", Box::new(file_out));
+    // let appender_out = Appender::builder().build("stdout", Box::new(stdout));
 
     let config = Config::builder()
         .appender(Appender::builder().build("rolling_file", Box::new(rolling_file)))
@@ -39,7 +43,12 @@ pub fn init_log() {
         //     .additive(false)
         //     .build("app::requests", LevelFilter::Info))
         // .build(Root::builder().appender("rolling_file").build(LevelFilter::Debug))
-        .build(Root::builder().appender("stdout").build(LevelFilter::Info))
+        .build(
+            Root::builder()
+                .appender("stdout")
+                .appender("file_out")
+                .build(LevelFilter::Info),
+        )
         .unwrap();
 
     let _ = log4rs::init_config(config).unwrap();

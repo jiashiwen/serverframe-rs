@@ -1,5 +1,5 @@
 use crate::cmd::requestsample::new_requestsample_cmd;
-use crate::cmd::{new_config_cmd, new_multi_cmd, new_start_cmd};
+use crate::cmd::{new_config_cmd, new_multi_cmd, new_start_cmd, new_stop_cmd};
 use crate::commons::CommandCompleter;
 use crate::commons::SubCmd;
 
@@ -20,11 +20,12 @@ use fork::{daemon, Fork};
 use std::fs::File;
 use std::io::Read;
 use std::process::{Command, Stdio};
+use std::str::FromStr;
 use std::sync::atomic::AtomicBool;
 use std::sync::atomic::Ordering;
 use std::sync::Arc;
 use std::time::Duration;
-use sysinfo::{System, SystemExt};
+use sysinfo::{Pid, RefreshKind, System, SystemExt};
 
 lazy_static! {
     static ref CLIAPP: clap::App<'static> = App::new("serverframe-rs")
@@ -62,25 +63,15 @@ lazy_static! {
         )
         .subcommand(new_requestsample_cmd())
         .subcommand(new_start_cmd())
+        .subcommand(new_stop_cmd())
         .subcommand(new_config_cmd())
         .subcommand(new_multi_cmd())
-        .subcommand(new_loop_cmd())
-        .subcommand(
-            App::new("test")
-                .about("controls testing features")
-                .version("1.3")
-                .author("Someone E. <someone_else@other.com>")
-                .arg(
-                    Arg::new("debug")
-                        .short('d')
-                        .about("print debug information verbosely")
-                )
-        );
+        .subcommand(new_loop_cmd());
     static ref SUBCMDS: Vec<SubCmd> = subcommands();
 }
 
 pub fn run_app() {
-    fs::write("pid", std::process::id().to_string());
+    // fs::write("pid", std::process::id().to_string());
     let matches = CLIAPP.clone().get_matches();
     if let Some(c) = matches.value_of("config") {
         println!("config path is:{}", c);
@@ -188,9 +179,6 @@ fn cmd_match(matches: &ArgMatches) {
                 println!("{}", "singint signal recived");
                 break;
             }
-            // i += 1;
-            // println!("i: {}", i);
-
             thread::sleep(Duration::from_millis(1000));
             if term.load(Ordering::Relaxed) {
                 println!("{:?}", term);
@@ -198,16 +186,6 @@ fn cmd_match(matches: &ArgMatches) {
             }
             let dt = Local::now();
             fs::write("timestamp", dt.timestamp_millis().to_string());
-        }
-    }
-
-    // You can check for the existence of subcommands, and if found use their
-    // matches just as you would the top level app
-    if let Some(ref matches) = matches.subcommand_matches("test") {
-        if matches.is_present("debug") {
-            println!("Printing debug info...");
-        } else {
-            println!("Printing normally...");
         }
     }
 
@@ -234,6 +212,26 @@ fn cmd_match(matches: &ArgMatches) {
             tokio::join!(handler);
         };
         rt.block_on(async_req);
+    }
+
+    if let Some(ref matches) = matches.subcommand_matches("stop") {
+        println!("server stopping...");
+        let sys = System::new_with_specifics(RefreshKind::with_processes(Default::default()));
+
+        let pidstr = String::from_utf8(fs::read("pid").unwrap()).unwrap();
+        let pid = Pid::from_str(pidstr.as_str()).unwrap();
+
+        println!("pid is {}", pid);
+
+        if let Some(p) = sys.process(pid) {
+            println!("{:?}", p);
+        } else {
+            println!("Server not run!");
+        };
+        Command::new("kill")
+            .args(["-15", pidstr.as_str()])
+            .output()
+            .expect("failed to execute process");
     }
 
     if let Some(config) = matches.subcommand_matches("config") {
