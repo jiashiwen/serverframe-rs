@@ -46,7 +46,7 @@ pub fn init_log() {
         .build(
             Root::builder()
                 .appender("stdout")
-                .appender("file_out")
+                // .appender("file_out")
                 .build(LevelFilter::Info),
         )
         .unwrap();

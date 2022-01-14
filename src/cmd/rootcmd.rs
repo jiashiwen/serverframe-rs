@@ -25,7 +25,7 @@ use std::sync::atomic::AtomicBool;
 use std::sync::atomic::Ordering;
 use std::sync::Arc;
 use std::time::Duration;
-use sysinfo::{Pid, RefreshKind, System, SystemExt};
+use sysinfo::{Pid, ProcessExt, RefreshKind, System, SystemExt};
 
 lazy_static! {
     static ref CLIAPP: clap::App<'static> = App::new("serverframe-rs")
@@ -42,17 +42,11 @@ lazy_static! {
                 .takes_value(true)
         )
         .arg(
-            Arg::new("daemon")
-                .short('d')
-                .long("daemon")
-                .about("run as daemon")
-        )
-        .arg(
             Arg::new("interact")
                 .short('i')
                 .long("interact")
-                .conflicts_with("daemon")
                 .about("run as interact mod")
+           // .conflicts_with("daemon")
         )
         .arg(
             Arg::new("v")
@@ -62,7 +56,14 @@ lazy_static! {
                 .about("Sets the level of verbosity")
         )
         .subcommand(new_requestsample_cmd())
-        .subcommand(new_start_cmd())
+        .subcommand(
+            new_start_cmd().arg(
+                Arg::new("daemon")
+                    .short('d')
+                    .long("daemon")
+                    .about("run as daemon")
+            )
+        )
         .subcommand(new_stop_cmd())
         .subcommand(new_config_cmd())
         .subcommand(new_multi_cmd())
@@ -140,30 +141,6 @@ fn cmd_match(matches: &ArgMatches) {
     let server = &config["server"];
     let req = Request::new(server.clone());
 
-    if matches.is_present("daemon") {
-        let args: Vec<String> = env::args().collect();
-        if let Ok(Fork::Child) = daemon(true, true) {
-            // 启动子进程
-            let mut cmd = Command::new(&args[0]);
-
-            for idx in 1..args.len() {
-                let arg = args.get(idx).expect("get cmd arg error!");
-                // 去除后台启动参数,避免重复启动
-                if arg.eq("-d") || arg.eq("-daemon") {
-                    continue;
-                }
-                cmd.arg(arg);
-            }
-
-            let mut child = cmd.spawn().expect("Child process failed to start.");
-            fs::write("pid", child.id().to_string());
-            println!("process id is:{}", std::process::id());
-            println!("child id is:{}", child.id());
-        }
-        println!("{}", "daemon mod");
-        std::process::exit(0);
-    }
-
     if matches.is_present("interact") {
         interact::run();
         return;
@@ -201,6 +178,29 @@ fn cmd_match(matches: &ArgMatches) {
     }
 
     if let Some(ref matches) = matches.subcommand_matches("start") {
+        if matches.is_present("daemon") {
+            let args: Vec<String> = env::args().collect();
+            if let Ok(Fork::Child) = daemon(true, true) {
+                // 启动子进程
+                let mut cmd = Command::new(&args[0]);
+
+                for idx in 1..args.len() {
+                    let arg = args.get(idx).expect("get cmd arg error!");
+                    // 去除后台启动参数,避免重复启动
+                    if arg.eq("-d") || arg.eq("-daemon") {
+                        continue;
+                    }
+                    cmd.arg(arg);
+                }
+
+                let mut child = cmd.spawn().expect("Child process failed to start.");
+                fs::write("pid", child.id().to_string());
+                println!("process id is:{}", std::process::id());
+                println!("child id is:{}", child.id());
+            }
+            println!("{}", "daemon mod");
+            std::process::exit(0);
+        }
         println!("server start!");
 
         let rt = tokio::runtime::Runtime::new().unwrap();
@@ -221,12 +221,11 @@ fn cmd_match(matches: &ArgMatches) {
         let pidstr = String::from_utf8(fs::read("pid").unwrap()).unwrap();
         let pid = Pid::from_str(pidstr.as_str()).unwrap();
 
-        println!("pid is {}", pid);
-
         if let Some(p) = sys.process(pid) {
-            println!("{:?}", p);
+            println!("terminal process: {:?}", p.pid());
         } else {
             println!("Server not run!");
+            return;
         };
         Command::new("kill")
             .args(["-15", pidstr.as_str()])
