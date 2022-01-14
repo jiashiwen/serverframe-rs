@@ -18,8 +18,8 @@ pub fn set_config(path: &str) {
         SETTINGS
             .write()
             .unwrap()
-            .merge(File::with_name("settings.toml"))
-            .unwrap();
+            .merge(File::with_name("settings.toml"));
+        // .unwrap();
     } else {
         SETTINGS
             .write()
@@ -33,6 +33,7 @@ pub fn set_config_file_path(path: String) {
     CONFIG_FILE_PATH.write().unwrap().clear();
     CONFIG_FILE_PATH.write().unwrap().push_str(path.as_str());
 }
+
 pub fn get_config_file_path() -> String {
     CONFIG_FILE_PATH.read().unwrap().clone()
 }
