@@ -137,8 +137,8 @@ pub fn process_exists(pid: &i32) -> bool {
 }
 
 fn cmd_match(matches: &ArgMatches) {
-    let config = get_config().unwrap();
-    let server = &config["server"];
+    // let config = get_config().unwrap();
+    // let server = &config["server"];
     // let req = Request::new(server.clone());
 
     if matches.is_present("interact") {
