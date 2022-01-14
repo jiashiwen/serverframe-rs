@@ -7,6 +7,14 @@ use crate::httpserver::exception::{Error_msg, Response_Error};
 use crate::httpserver::module::{CreateUser, User};
 use serde_json::{json, Value};
 
+// async fn root() -> &'static str {
+//     "OK!"
+// }
+
+pub async fn root() -> Json<Value> {
+    Json(json!({"health":"ok"}))
+}
+
 // pub async fn tpost(Json(payload): Json<CreateUser>) -> impl IntoResponse {
 pub async fn tpost(Json(payload): Json<CreateUser>) -> Json<Value> {
     if !payload.username.eq("abc") {

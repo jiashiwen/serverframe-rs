@@ -1,4 +1,4 @@
-use crate::httpserver::service::tpost;
+use crate::httpserver::service::{root, tpost};
 use axum::routing::{get, post};
 use axum::Router;
 
@@ -8,6 +8,6 @@ pub fn router_root() -> Router {
     return root.merge(api);
 }
 
-async fn root() -> &'static str {
-    "OK!"
-}
+// async fn root() -> &'static str {
+//     "OK!"
+// }
