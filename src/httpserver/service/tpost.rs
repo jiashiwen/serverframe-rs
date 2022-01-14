@@ -17,14 +17,13 @@ pub async fn root() -> Json<Value> {
 
 // pub async fn tpost(Json(payload): Json<CreateUser>) -> impl IntoResponse {
 pub async fn tpost(Json(payload): Json<CreateUser>) -> Json<Value> {
-    if !payload.username.eq("abc") {
-        let mut err_msg = Error_msg::new();
-        err_msg.set_error_code(5);
-        err_msg.set_msg("555 not ok".to_string());
-        let re = Response_Error::new(err_msg);
-
-        return Json(json!(re));
-    }
+    // if !payload.username.eq("abc") {
+    //     let mut err_msg = Error_msg::new();
+    //     err_msg.set_error_code(5);
+    //     err_msg.set_msg("555 not ok".to_string());
+    //     let re = Response_Error::new(err_msg);
+    //     return Json(json!(re));
+    // }
     let user = User {
         id: 1337,
         username: payload.username,
