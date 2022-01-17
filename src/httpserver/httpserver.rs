@@ -32,9 +32,6 @@ impl HttpServer {
     }
 
     pub async fn run(&mut self, rx: Receiver<()>) -> JoinHandle<()> {
-        // pub async fn run(&mut self) -> JoinHandle<T> {
-        // let mut handles = vec![];
-
         let server = axum::Server::bind(&self.addr)
             .serve(self.router.clone().into_make_service())
             .with_graceful_shutdown(async {

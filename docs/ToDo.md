@@ -6,9 +6,9 @@
 - [x] stop server
 - [ ] axum 日志输出
 - [x] 统一错误处理
+- [ ] http timeout
 - [ ] resources接入
 - [ ] 配置文件处理
 
-# 性能问题
+# 性能
 
-- [ ] post出现大量4xx

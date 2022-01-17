@@ -201,7 +201,6 @@ fn cmd_match(matches: &ArgMatches) {
             println!("{}", "daemon mod");
             std::process::exit(0);
         }
-        println!("server start!");
 
         let rt = tokio::runtime::Runtime::new().unwrap();
         let (tx, rx) = tokio::sync::oneshot::channel::<()>();
