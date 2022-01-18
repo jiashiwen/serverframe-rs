@@ -1,5 +1,6 @@
 mod setting;
 
+pub use setting::generate_default_config;
 pub use setting::get_config;
 pub use setting::get_config_file_path;
 

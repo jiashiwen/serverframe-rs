@@ -21,7 +21,7 @@ pub async fn root() -> HandlerResult<Value> {
 // pub async fn tpost(Json(payload): Json<CreateUser>) -> impl IntoResponse {
 pub async fn tpost(Json(payload): Json<CreateUser>) -> HandlerResult<User> {
     if !payload.username.eq("abc") {
-        let mut err = AppError {
+        let err = AppError {
             message: Some("555 not ok".to_string()),
             cause: None,
             error_type: AppErrorType::unknowErr,

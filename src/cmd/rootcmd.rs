@@ -3,8 +3,8 @@ use crate::cmd::{new_config_cmd, new_multi_cmd, new_start_cmd, new_stop_cmd};
 use crate::commons::CommandCompleter;
 use crate::commons::SubCmd;
 
-use crate::configure::set_config_file_path;
 use crate::configure::{self, get_config, get_config_file_path};
+use crate::configure::{generate_default_config, set_config_file_path};
 use crate::request::{req, ReqResult, Request, RequestTaskListAll};
 use crate::{configure::set_config, httpserver, interact};
 use clap::{App, AppSettings, Arg, ArgMatches};
@@ -13,6 +13,8 @@ use log::info;
 
 use std::borrow::Borrow;
 use std::{env, fs, thread};
+
+use std::fs::metadata;
 
 use crate::cmd::loopcmd::new_loop_cmd;
 use chrono::prelude::Local;
@@ -246,6 +248,20 @@ fn cmd_match(matches: &ArgMatches) {
                 }
                 _ => {}
             }
+        }
+
+        if let Some(gen_config) = config.subcommand_matches("gendefault") {
+            let mut file = String::from("");
+            if let Some(path) = gen_config.value_of("filepath") {
+                file.push_str(path);
+            } else {
+                file.push_str("config_default.yml")
+            }
+            if let Err(e) = generate_default_config(file.as_str()) {
+                log::error!("{}", e);
+                return;
+            };
+            println!("{} created!", file);
         }
     }
 }
