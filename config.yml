@@ -1,5 +1,5 @@
 http:
-  port: 3000
+  port: 3100
   addr: "0.0.0.0"
 tikv:
   pdaddrs:

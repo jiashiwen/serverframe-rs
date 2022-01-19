@@ -3,7 +3,7 @@ use crate::cmd::{new_config_cmd, new_multi_cmd, new_start_cmd, new_stop_cmd};
 use crate::commons::CommandCompleter;
 use crate::commons::SubCmd;
 
-use crate::configure::{self, get_config, get_config_file_path};
+use crate::configure::{self, get_config, get_config_file_path, get_current_config_yml};
 use crate::configure::{generate_default_config, set_config_file_path};
 use crate::request::{req, ReqResult, Request, RequestTaskListAll};
 use crate::{configure::set_config, httpserver, interact};
@@ -21,6 +21,7 @@ use chrono::prelude::Local;
 use fork::{daemon, Fork};
 use std::fs::File;
 use std::io::Read;
+use std::net::{Ipv4Addr, SocketAddr, SocketAddrV4};
 use std::process::{Command, Stdio};
 use std::str::FromStr;
 use std::sync::atomic::AtomicBool;
@@ -74,13 +75,13 @@ lazy_static! {
 }
 
 pub fn run_app() {
-    // fs::write("pid", std::process::id().to_string());
     let matches = CLIAPP.clone().get_matches();
-    if let Some(c) = matches.value_of("config") {
-        println!("config path is:{}", c);
-        set_config_file_path(c.to_string());
-    }
-    set_config(&get_config_file_path());
+    // if let Some(c) = matches.value_of("config") {
+    //     println!("config path is:{}", c);
+    //     set_config_file_path(c.to_string());
+    // }
+    set_config("");
+    // println!("{:?}", get_current_config_yml());
     cmd_match(&matches);
 }
 
@@ -142,6 +143,11 @@ fn cmd_match(matches: &ArgMatches) {
     // let config = get_config().unwrap();
     // let server = &config["server"];
     // let req = Request::new(server.clone());
+
+    if let Some(c) = matches.value_of("config") {
+        set_config_file_path(c.to_string());
+        set_config(&get_config_file_path());
+    }
 
     if matches.is_present("interact") {
         interact::run();
@@ -207,8 +213,17 @@ fn cmd_match(matches: &ArgMatches) {
         let rt = tokio::runtime::Runtime::new().unwrap();
         let (tx, rx) = tokio::sync::oneshot::channel::<()>();
         let async_req = async {
-            // let (tx, rx) = tokio::sync::oneshot::channel::<()>();
+            let config = get_config().unwrap();
+            let mut addr = config.http.addr;
+            let port = config.http.port;
+            addr.push_str(":");
+            addr.push_str(&*port.to_string());
+
             let mut http_server = httpserver::HttpServer::default();
+            let bind: SocketAddr = addr.parse().expect("unreachable panic");
+            http_server.addr = bind;
+
+            // http_server.addr =
             let handler = http_server.run(rx).await;
             tokio::join!(handler);
         };
@@ -239,9 +254,15 @@ fn cmd_match(matches: &ArgMatches) {
             match show.subcommand_name() {
                 Some("all") => {
                     println!("config show all");
-                    info!("log show all");
-                    configure::get_config_file_path();
-                    println!("{:?}", configure::get_config());
+                    let yml = get_current_config_yml();
+                    match yml {
+                        Ok(str) => {
+                            println!("{}", str);
+                        }
+                        Err(e) => {
+                            eprintln!("{}", e);
+                        }
+                    }
                 }
                 Some("info") => {
                     println!("config show info");
