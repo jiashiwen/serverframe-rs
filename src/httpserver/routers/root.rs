@@ -1,20 +1,22 @@
 use crate::httpserver::handlers::{root, tpost};
-
 use axum::error_handling::HandleErrorLayer;
 use axum::http::StatusCode;
 use axum::routing::{get, post};
 use axum::{BoxError, Router};
 use std::time::Duration;
-use tower::{ServiceBuilder, ServiceExt};
-// use tower_http::auth::RequireAuthorizationLayer;
+use tower::ServiceBuilder;
 use tower_http::{compression::CompressionLayer, trace::TraceLayer};
 
 pub fn router_root() -> Router {
+    // let onreq = DefaultOnRequest::new().level(Level::INFO);
+    let tracer = TraceLayer::new_for_http();
+    // let tracer = tracer.on_request(onreq);
     let middleware_stack = ServiceBuilder::new()
-        .layer(TraceLayer::new_for_http())
+        .layer(tracer)
         .layer(CompressionLayer::new())
         .layer(HandleErrorLayer::new(handle_timeout_error))
         .layer(tower::timeout::TimeoutLayer::new(Duration::from_secs(2)))
+        // .layer(TraceLayer::new_for_http())
         // .timeout(Duration::from_secs(2))
         // .layer(RequireAuthorizationLayer::basic("test", "passwd"))
         .into_inner();

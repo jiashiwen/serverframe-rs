@@ -1,13 +1,11 @@
 use crate::configure::config_error::{ConfigError, ConfigErrorType};
 use anyhow::Result;
 use serde::{Deserialize, Serialize};
-use serde_yaml::{from_str, Value};
-use std::borrow::Borrow;
+use serde_yaml::from_str;
 use std::fs;
 use std::path::Path;
 use std::sync::Mutex;
-use std::sync::{LockResult, RwLockReadGuard};
-use std::{collections::HashMap, sync::RwLock};
+use std::sync::RwLock;
 
 #[derive(Debug, PartialEq, Serialize, Deserialize, Clone)]
 pub struct TiKVConfig {
@@ -110,7 +108,7 @@ pub fn get_config_file_path() -> String {
 
 pub fn get_config() -> Result<Config> {
     let locked_config = GLOBAL_CONFIG.lock().map_err(|e| {
-        return ConfigError::from_err(e.to_string(), ConfigErrorType::unknowErr);
+        return ConfigError::from_err(e.to_string(), ConfigErrorType::UnknowErr);
     })?;
     Ok(locked_config.get_config_image())
 }

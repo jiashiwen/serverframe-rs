@@ -1,10 +1,10 @@
-use std::fmt::{Display, Formatter};
+use std::fmt::Display;
 
 /// 错误的类型
 #[derive(Debug)]
 pub enum ConfigErrorType {
     /// 未知错误
-    unknowErr,
+    UnknowErr,
 }
 
 /// 应用错误
@@ -20,9 +20,10 @@ pub struct ConfigError {
 
 impl ConfigError {
     /// 错误代码
+    #[allow(dead_code)]
     fn code(&self) -> i32 {
         match self.error_type {
-            ConfigErrorType::unknowErr => 9999,
+            ConfigErrorType::UnknowErr => 9999,
         }
     }
     /// 从上级错误中创建应用错误
@@ -34,6 +35,7 @@ impl ConfigError {
         }
     }
     /// 从字符串创建应用错误
+    #[allow(dead_code)]
     fn from_str(msg: &str, error_type: ConfigErrorType) -> Self {
         Self {
             message: Some(msg.to_string()),

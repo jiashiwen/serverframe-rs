@@ -1,19 +1,16 @@
 //! 自定义错误
-use std::{convert::Infallible, fmt::Display};
+use std::fmt::Display;
 
-use axum::{
-    body::{Bytes, Full},
-    response::IntoResponse,
-    Json,
-};
+use axum::{response::IntoResponse, Json};
 
 use crate::httpserver::module::Response;
 
 /// Error type
+#[allow(dead_code)]
 #[derive(Debug)]
 pub enum AppErrorType {
     /// 未知错误
-    unknowErr,
+    UnknowErr,
     /// 数据库错误
     DbError,
     /// 未找到
@@ -37,10 +34,11 @@ impl AppError {
         match self.error_type {
             AppErrorType::DbError => 1,
             AppErrorType::NotFound => 2,
-            AppErrorType::unknowErr => 9999,
+            AppErrorType::UnknowErr => 9999,
         }
     }
     /// 从上级错误中创建应用错误
+    #[allow(dead_code)]
     fn from_err(err: impl ToString, error_type: AppErrorType) -> Self {
         Self {
             message: None,
@@ -49,6 +47,7 @@ impl AppError {
         }
     }
     /// 从字符串创建应用错误
+    #[allow(dead_code)]
     fn from_str(msg: &str, error_type: AppErrorType) -> Self {
         Self {
             message: Some(msg.to_string()),
@@ -57,10 +56,12 @@ impl AppError {
         }
     }
     /// 数据库错误
+    #[allow(dead_code)]
     pub fn db_error(err: impl ToString) -> Self {
         Self::from_err(err, AppErrorType::DbError)
     }
     /// 未找到
+    #[allow(dead_code)]
     pub fn not_found() -> Self {
         Self::from_str("不存在的记录", AppErrorType::NotFound)
     }

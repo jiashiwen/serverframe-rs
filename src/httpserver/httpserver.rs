@@ -1,17 +1,9 @@
-use std::borrow::Borrow;
-use std::net::SocketAddr;
-
-use axum::routing::get;
-use axum::Router;
-use std::time::Duration;
-use tokio::{select, spawn};
-
-use tokio::task::JoinHandle;
-// use tracing::Instrument;
-
-// use tracing::instrument::WithSubscriber;
 use crate::httpserver::routers::router_root;
-use tokio::sync::oneshot::{channel, Receiver, Sender};
+use axum::Router;
+use std::net::SocketAddr;
+use tokio::spawn;
+use tokio::sync::oneshot::Receiver;
+use tokio::task::JoinHandle;
 
 pub struct HttpServer {
     pub addr: SocketAddr,
@@ -21,9 +13,6 @@ pub struct HttpServer {
 impl HttpServer {
     pub fn default() -> Self {
         let band_addr = SocketAddr::from(([0, 0, 0, 0], 3000));
-        // let (tx, rx) = tokio::sync::oneshot::channel::<()>();
-        // let app = Router::new()
-        //     .route("/", get(root));
         let app = router_root();
         Self {
             addr: band_addr,
@@ -44,8 +33,4 @@ impl HttpServer {
         log::info!("httpserver start");
         return handle;
     }
-}
-
-async fn root() -> &'static str {
-    "Hello, World!"
 }

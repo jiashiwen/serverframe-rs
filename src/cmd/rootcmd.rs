@@ -1,40 +1,25 @@
-use crate::cmd::requestsample::new_requestsample_cmd;
-use crate::cmd::{new_config_cmd, new_multi_cmd, new_start_cmd, new_stop_cmd};
+use crate::cmd::{new_config_cmd, new_start_cmd, new_stop_cmd};
 use crate::commons::CommandCompleter;
 use crate::commons::SubCmd;
-
-use crate::configure::{self, get_config, get_config_file_path, get_current_config_yml};
 use crate::configure::{generate_default_config, set_config_file_path};
-use crate::request::{req, ReqResult, Request, RequestTaskListAll};
+use crate::configure::{get_config, get_config_file_path, get_current_config_yml};
 use crate::{configure::set_config, httpserver, interact};
+
 use clap::{App, AppSettings, Arg, ArgMatches};
-use lazy_static::lazy_static;
-use log::info;
-
-use std::borrow::Borrow;
-use std::{env, fs, thread};
-
-use std::fs::metadata;
-
-use crate::cmd::loopcmd::new_loop_cmd;
-use chrono::prelude::Local;
 use fork::{daemon, Fork};
-use std::fs::File;
-use std::io::Read;
-use std::net::{Ipv4Addr, SocketAddr, SocketAddrV4};
-use std::process::{Command, Stdio};
+use lazy_static::lazy_static;
+use std::borrow::Borrow;
+use std::net::SocketAddr;
+use std::process::Command;
 use std::str::FromStr;
-use std::sync::atomic::AtomicBool;
-use std::sync::atomic::Ordering;
-use std::sync::Arc;
-use std::time::Duration;
+use std::{env, fs};
 use sysinfo::{Pid, ProcessExt, RefreshKind, System, SystemExt};
 
 lazy_static! {
     static ref CLIAPP: clap::App<'static> = App::new("serverframe-rs")
         .version("1.0")
         .author("Shiwen Jia. <jiashiwen@gmail.com>")
-        .about("command line sample")
+        .about("RustBoot")
         .setting(AppSettings::ArgRequiredElseHelp)
         .arg(
             Arg::new("config")
@@ -50,14 +35,6 @@ lazy_static! {
                 .long("interact")
                 .help("run as interact mod")
         )
-        .arg(
-            Arg::new("v")
-                .short('v')
-                .multiple_occurrences(true)
-                .takes_value(true)
-                .help("Sets the level of verbosity")
-        )
-        .subcommand(new_requestsample_cmd())
         .subcommand(
             new_start_cmd().arg(
                 Arg::new("daemon")
@@ -67,9 +44,7 @@ lazy_static! {
             )
         )
         .subcommand(new_stop_cmd())
-        .subcommand(new_config_cmd())
-        .subcommand(new_multi_cmd())
-        .subcommand(new_loop_cmd());
+        .subcommand(new_config_cmd());
     static ref SUBCMDS: Vec<SubCmd> = subcommands();
 }
 
@@ -122,17 +97,6 @@ fn subcommands() -> Vec<SubCmd> {
     subcmds
 }
 
-pub fn process_exists(pid: &i32) -> bool {
-    let mut sys = System::new_all();
-    sys.refresh_all();
-    for (syspid, _) in sys.processes() {
-        if syspid == pid {
-            return true;
-        }
-    }
-    return false;
-}
-
 fn cmd_match(matches: &ArgMatches) {
     if let Some(c) = matches.value_of("config") {
         set_config_file_path(c.to_string());
@@ -142,37 +106,6 @@ fn cmd_match(matches: &ArgMatches) {
     if matches.is_present("interact") {
         interact::run();
         return;
-    }
-
-    if let Some(ref matches) = matches.subcommand_matches("loop") {
-        let term = Arc::new(AtomicBool::new(false));
-        let sigint_2 = Arc::new(AtomicBool::new(false));
-        signal_hook::flag::register(signal_hook::consts::SIGTERM, Arc::clone(&term)).unwrap();
-        signal_hook::flag::register(signal_hook::consts::SIGINT, Arc::clone(&sigint_2)).unwrap();
-        loop {
-            if sigint_2.load(Ordering::Relaxed) {
-                println!("{}", "singint signal recived");
-                break;
-            }
-            thread::sleep(Duration::from_millis(1000));
-            if term.load(Ordering::Relaxed) {
-                println!("{:?}", term);
-                break;
-            }
-            let dt = Local::now();
-            fs::write("timestamp", dt.timestamp_millis().to_string());
-        }
-    }
-
-    if let Some(ref matches) = matches.subcommand_matches("requestsample") {
-        if let Some(_) = matches.subcommand_matches("baidu") {
-            let rt = tokio::runtime::Runtime::new().unwrap();
-            let async_req = async {
-                let result = req::get_baidu().await;
-                println!("{:?}", result);
-            };
-            rt.block_on(async_req);
-        };
     }
 
     if let Some(ref matches) = matches.subcommand_matches("start") {
@@ -191,8 +124,8 @@ fn cmd_match(matches: &ArgMatches) {
                     cmd.arg(arg);
                 }
 
-                let mut child = cmd.spawn().expect("Child process failed to start.");
-                fs::write("pid", child.id().to_string());
+                let child = cmd.spawn().expect("Child process failed to start.");
+                fs::write("pid", child.id().to_string()).expect("Write pid file error!");
                 println!("process id is:{}", std::process::id());
                 println!("child id is:{}", child.id());
             }
@@ -213,14 +146,13 @@ fn cmd_match(matches: &ArgMatches) {
             let bind: SocketAddr = addr.parse().expect("unreachable panic");
             http_server.addr = bind;
 
-            // http_server.addr =
-            let handler = http_server.run(rx).await;
-            tokio::join!(handler);
+            let http_handler = http_server.run(rx).await;
+            let _http = tokio::join!(http_handler);
         };
         rt.block_on(async_req);
     }
 
-    if let Some(ref matches) = matches.subcommand_matches("stop") {
+    if let Some(ref _matches) = matches.subcommand_matches("stop") {
         println!("server stopping...");
         let sys = System::new_with_specifics(RefreshKind::with_processes(Default::default()));
 

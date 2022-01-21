@@ -6,7 +6,7 @@ mod configure;
 mod httpserver;
 mod interact;
 mod logger;
-mod request;
+// mod request;
 
 fn main() {
     init_log();

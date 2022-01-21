@@ -1,4 +1,4 @@
-use serde::{Deserialize, Serialize};
+use serde::Serialize;
 
 // 自定义响应
 #[derive(Serialize)]
