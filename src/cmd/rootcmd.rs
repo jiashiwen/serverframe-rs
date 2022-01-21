@@ -49,7 +49,6 @@ lazy_static! {
                 .short('i')
                 .long("interact")
                 .help("run as interact mod")
-           // .conflicts_with("daemon")
         )
         .arg(
             Arg::new("v")
@@ -76,12 +75,7 @@ lazy_static! {
 
 pub fn run_app() {
     let matches = CLIAPP.clone().get_matches();
-    // if let Some(c) = matches.value_of("config") {
-    //     println!("config path is:{}", c);
-    //     set_config_file_path(c.to_string());
-    // }
     set_config("");
-    // println!("{:?}", get_current_config_yml());
     cmd_match(&matches);
 }
 
@@ -140,10 +134,6 @@ pub fn process_exists(pid: &i32) -> bool {
 }
 
 fn cmd_match(matches: &ArgMatches) {
-    // let config = get_config().unwrap();
-    // let server = &config["server"];
-    // let req = Request::new(server.clone());
-
     if let Some(c) = matches.value_of("config") {
         set_config_file_path(c.to_string());
         set_config(&get_config_file_path());

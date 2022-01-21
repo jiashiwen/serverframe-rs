@@ -97,7 +97,10 @@ pub fn set_config(path: &str) {
 }
 
 pub fn set_config_file_path(path: String) {
-    CONFIG_FILE_PATH.write().unwrap().clear();
+    CONFIG_FILE_PATH
+        .write()
+        .expect("clear config file path error!")
+        .clear();
     CONFIG_FILE_PATH.write().unwrap().push_str(path.as_str());
 }
 

@@ -9,7 +9,7 @@ use axum::{
 
 use crate::httpserver::module::Response;
 
-/// 错误的类型
+/// Error type
 #[derive(Debug)]
 pub enum AppErrorType {
     /// 未知错误
