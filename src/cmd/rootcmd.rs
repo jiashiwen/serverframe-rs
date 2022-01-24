@@ -2,8 +2,9 @@ use crate::cmd::{new_config_cmd, new_start_cmd, new_stop_cmd};
 use crate::commons::CommandCompleter;
 use crate::commons::SubCmd;
 use crate::configure::{generate_default_config, set_config_file_path};
-use crate::configure::{get_config, get_config_file_path, get_current_config_yml};
-use crate::{configure::set_config, httpserver, interact};
+use crate::configure::{get_config, get_config_file_path, get_current_config_yml, set_config};
+use crate::resources::set_tikv;
+use crate::{httpserver, interact};
 
 use clap::{App, AppSettings, Arg, ArgMatches};
 use fork::{daemon, Fork};
@@ -51,6 +52,21 @@ lazy_static! {
 pub fn run_app() {
     let matches = CLIAPP.clone().get_matches();
     set_config("");
+    if let Ok(cfg) = get_config() {
+        println!("{:?}", cfg);
+        // let mut pd: Vec<&str> = vec![];
+        // for str in cfg.tikv.pdaddrs {
+        //     pd.push(String::from(str).as_str());
+        // }
+        // cfg.tikv
+        //     .pdaddrs
+        //     .iter()
+        //     .map(|iterm| pd.push(String::from(iterm).as_str()));
+        let pd: Vec<&str> = cfg.tikv.pdaddrs.iter().map(|s| &**s).collect();
+        println!("{:?}", pd);
+        set_tikv(pd);
+    };
+
     cmd_match(&matches);
 }
 
