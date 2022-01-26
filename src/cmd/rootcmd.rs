@@ -3,7 +3,7 @@ use crate::commons::CommandCompleter;
 use crate::commons::SubCmd;
 use crate::configure::{generate_default_config, set_config_file_path};
 use crate::configure::{get_config, get_config_file_path, get_current_config_yml, set_config};
-use crate::resources::set_tikv;
+use crate::resources::{get_tikv_handler, set_tikv};
 use crate::{httpserver, interact};
 
 use clap::{App, AppSettings, Arg, ArgMatches};
@@ -64,7 +64,9 @@ pub fn run_app() {
         //     .map(|iterm| pd.push(String::from(iterm).as_str()));
         let pd: Vec<&str> = cfg.tikv.pdaddrs.iter().map(|s| &**s).collect();
         println!("{:?}", pd);
+        // init_tikv();
         set_tikv(pd);
+        get_tikv_handler();
     };
 
     cmd_match(&matches);

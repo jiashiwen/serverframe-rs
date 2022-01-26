@@ -75,6 +75,12 @@ impl Display for AppError {
     }
 }
 
+// impl From<apperror::AppError> for AppError {
+//     fn from(apperror: AppError) -> Self {
+//         apperror
+//     }
+// }
+
 // impl From<deadpool_postgres::PoolError> for AppError {
 //     fn from(err: deadpool_postgres::PoolError) -> Self {
 //         Self::db_error(err)

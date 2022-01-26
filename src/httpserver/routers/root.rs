@@ -1,4 +1,4 @@
-use crate::httpserver::handlers::{root, tpost};
+use crate::httpserver::handlers::{raw_get, raw_put, root, tpost};
 use axum::error_handling::HandleErrorLayer;
 use axum::http::StatusCode;
 use axum::routing::{get, post};
@@ -27,6 +27,8 @@ pub fn router_root() -> Router {
 
     let api = Router::new()
         .route("/v1/tpost", post(tpost))
+        .route("/v1/raw/put", post(raw_put))
+        .route("/v1/raw/get", post(raw_get))
         .layer(middleware_stack);
     return root.nest("/api", api);
     // let router = root.merge(api);

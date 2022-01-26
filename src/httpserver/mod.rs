@@ -5,3 +5,4 @@ mod handlers;
 mod httpserver;
 mod module;
 mod routers;
+mod service;

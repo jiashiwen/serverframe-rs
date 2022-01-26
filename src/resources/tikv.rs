@@ -5,9 +5,10 @@ pub struct TiKVHandler {
     client_txn: TransactionClient,
 }
 
+// TiKVHandler 初始化
 impl TiKVHandler {
     pub async fn default() -> Self {
-        let endpoint = vec!["172.0.0.1:2379"];
+        let endpoint = vec!["127.0.0.1:2379"];
         Self {
             client_raw: RawClient::new(endpoint.clone(), None).await.unwrap(),
             client_txn: TransactionClient::new(endpoint, None).await.unwrap(),
@@ -20,12 +21,15 @@ impl TiKVHandler {
     pub async fn new(pd_endpoints: Vec<&str>) -> Self {
         Self {
             client_raw: RawClient::new(pd_endpoints.clone(), None).await.unwrap(),
-            client_txn: TransactionClient::new(pd_endpoints, None).await.unwrap(),
+            client_txn: TransactionClient::new(pd_endpoints.clone(), None)
+                .await
+                .unwrap(),
         }
     }
-    // pub fn get_tikvhandler(&self) -> &TiKVHandler {
-    //     self
-    // }
+}
+
+// Raw KV operate
+impl TiKVHandler {
     pub async fn raw_put(&self, key: String, val: String) -> tikv_client::Result<()> {
         println!("invoke put");
         self.client_raw.put(Key::from(key), Value::from(val)).await
@@ -59,7 +63,7 @@ impl TiKVHandler {
             .await
     }
 
-    pub async fn prefix_scan(
+    pub async fn raw_prefix_scan(
         &self,
         start: String,
         end: String,
@@ -74,4 +78,52 @@ impl TiKVHandler {
     }
 }
 
-// pub async fn set_global_tikv() {}
+// Tracnsaction KV operate
+// impl TiKVHandler {
+//     pub async fn txn_put(&self, key: String, val: String) -> tikv_client::Result<()> {
+//         println!("invoke put");
+//         self.client_txn.put(Key::from(key), Value::from(val)).await
+//     }
+//
+//     pub async fn txn_remove(&self, key: String) -> tikv_client::Result<()> {
+//         self.client_txn.delete(Key::from(key)).await
+//     }
+//
+//     pub async fn txn_remove_all(&self) -> tikv_client::Result<()> {
+//         let range = "".."";
+//         self.client_txn.delete_range(range.into_owned()).await
+//     }
+//
+//     pub async fn txn_get(&self, key: String) -> tikv_client::Result<Option<Value>> {
+//         self.client_txn.get(key.to_owned()).await
+//     }
+//
+//     pub async fn txn_get_ttl_sec(&self, key: String) -> tikv_client::Result<Option<u64>> {
+//         self.client_txn.get_key_ttl_secs(key.to_owned()).await
+//     }
+//
+//     pub async fn txn_put_with_ttl(
+//         &self,
+//         key: String,
+//         val: String,
+//         ttl: u64,
+//     ) -> tikv_client::Result<()> {
+//         self.client_txn
+//             .put_with_ttl(Key::from(key), Value::from(val.as_str()), ttl)
+//             .await
+//     }
+//
+//     pub async fn txn_prefix_scan(
+//         &self,
+//         start: String,
+//         end: String,
+//         limited: u32,
+//     ) -> tikv_client::Result<Vec<KvPair>> {
+//         let range = start..end;
+//         self.client_txn.scan(range, limited).await
+//         // self.client_raw.scan(range, limited).await.map_err(|e| {
+//         //     return KvPairError::OptionError(e.to_string());
+//         //     // e
+//         // })?
+//     }
+// }
