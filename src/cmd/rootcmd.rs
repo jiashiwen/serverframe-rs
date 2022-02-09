@@ -3,6 +3,7 @@ use crate::commons::CommandCompleter;
 use crate::commons::SubCmd;
 use crate::configure::{generate_default_config, set_config_file_path};
 use crate::configure::{get_config, get_config_file_path, get_current_config_yml, set_config};
+use crate::resources::init_resources;
 use crate::resources::{get_tikv_handler, set_tikv};
 use crate::{httpserver, interact};
 
@@ -51,24 +52,6 @@ lazy_static! {
 
 pub fn run_app() {
     let matches = CLIAPP.clone().get_matches();
-    set_config("");
-    if let Ok(cfg) = get_config() {
-        println!("{:?}", cfg);
-        // let mut pd: Vec<&str> = vec![];
-        // for str in cfg.tikv.pdaddrs {
-        //     pd.push(String::from(str).as_str());
-        // }
-        // cfg.tikv
-        //     .pdaddrs
-        //     .iter()
-        //     .map(|iterm| pd.push(String::from(iterm).as_str()));
-        let pd: Vec<&str> = cfg.tikv.pdaddrs.iter().map(|s| &**s).collect();
-        println!("{:?}", pd);
-        // init_tikv();
-        set_tikv(pd);
-        get_tikv_handler();
-    };
-
     cmd_match(&matches);
 }
 
@@ -119,6 +102,10 @@ fn cmd_match(matches: &ArgMatches) {
     if let Some(c) = matches.value_of("config") {
         set_config_file_path(c.to_string());
         set_config(&get_config_file_path());
+        // init_resources().expect("init resources fail");
+    } else {
+        set_config("");
+        // init_resources().expect("init resources fail");
     }
 
     if matches.is_present("interact") {
@@ -130,11 +117,11 @@ fn cmd_match(matches: &ArgMatches) {
         if matches.is_present("daemon") {
             let args: Vec<String> = env::args().collect();
             if let Ok(Fork::Child) = daemon(true, true) {
-                // 启动子进程
+                // Start child thread
                 let mut cmd = Command::new(&args[0]);
-
                 for idx in 1..args.len() {
                     let arg = args.get(idx).expect("get cmd arg error!");
+                    // remove start as daemon variable
                     // 去除后台启动参数,避免重复启动
                     if arg.eq("-d") || arg.eq("-daemon") {
                         continue;
@@ -144,13 +131,37 @@ fn cmd_match(matches: &ArgMatches) {
 
                 let child = cmd.spawn().expect("Child process failed to start.");
                 fs::write("pid", child.id().to_string()).expect("Write pid file error!");
-                println!("process id is:{}", std::process::id());
-                println!("child id is:{}", child.id());
             }
             println!("{}", "daemon mod");
             std::process::exit(0);
         }
 
+        let banner =
+            "                                                                                      
+                    .                                                                 
+                .'ck0Oo;.                                         .'.                 
+             .;d0NMMMMMWKxc'                                     .dNk.                
+         .'lkKWMMMMMMMMMMW0o.                                    .dWWKc               
+      .;o0NMMMMMMMMMMWXOo;.                                       .codc.    ......    
+   .:xKWMMMMMMMMMMMM0c.             .                       ...';:clodxkkOO00KKXXKc.  
+   '0MMMMMMMMMMMMMMWo            'cxO;               'cloxkOOOOOk0NMNOolcccccllodko.  
+   '0MMMMMMWWMMMMMMWd        .;oONMMN:               .dkdlc;'...'xX0:.  ..            
+   '0MMMNOocOMMMMMMWd       .dWMMMMMNc                         :0Ko.  .dX0c.          
+   'OKxc'   dWMMMMMWd       .kMMMMMMNc                      .,kNNx:;:o0NOo,           
+    ..      dWMMMMMWo       .kMMMMMMNc                    .o0NWWX0KWWXx;.             
+            dWMMMMMWo       .kMMMMMMNc                     ;dl:,,o00o'                
+            dWMMMMMWo       .kMMMMMMNc                        .;k0o.   .::;;.         
+            dWMMMMMWo       .kMMMMMMNc                      .:ONO:',:lkk:..,xo.       
+            dWMMMMMWo       .kMMMMMMNc                   ;dkKWMWX0KXK0O:..:xXX:       
+            dWMMMMMWo       .kMMMMNOl.                   ,OX0kdlc;'...   .:xKXl       
+            dWMMMMMWo       .kWKxc'                       ...               ...       
+            cKWMMMMWo        ,;.                                                      
+             .:d0NMWo                                                                 
+                .,ld;                                                                 
+                                                                                      ";
+        println!("{}", banner);
+        println!("current pid is:{}", std::process::id());
+        init_resources().expect("init resources fail");
         let rt = tokio::runtime::Runtime::new().unwrap();
         let (tx, rx) = tokio::sync::oneshot::channel::<()>();
         let async_req = async {

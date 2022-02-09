@@ -44,3 +44,4 @@ rebase_tags.js
 Cargo.lock
 **/target
 **/*.rs.bk
+**/pid

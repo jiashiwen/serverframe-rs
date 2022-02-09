@@ -24,8 +24,6 @@ anyhow = "1.0.45"
 futures = "0.3.17"
 fork = "0.1"
 sysinfo = "0.21.2"
-#chrono = "0.4"
-#signal-hook = "0.3.12"
 axum = "0.4.4"
 axum-debug = "0.3.2"
 tower-http = { version = "0.2", features = ["trace", "compression-full", "auth"] }
@@ -43,3 +41,7 @@ path = "examples/configrs.rs"
 [[example]]
 name = "yamlparser"
 path = "examples/yamlparser.rs"
+
+[[example]]
+name = "txn"
+path = "examples/tikv_txn.rs"

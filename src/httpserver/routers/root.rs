@@ -1,8 +1,11 @@
-use crate::httpserver::handlers::{raw_get, raw_put, root, tpost};
+use crate::httpserver::handlers::{
+    current_config, raw_flushall, raw_get, raw_put, raw_scan, root, tpost,
+};
 use axum::error_handling::HandleErrorLayer;
 use axum::http::StatusCode;
 use axum::routing::{get, post};
 use axum::{BoxError, Router};
+use std::thread::current;
 use std::time::Duration;
 use tower::ServiceBuilder;
 use tower_http::{compression::CompressionLayer, trace::TraceLayer};
@@ -29,6 +32,9 @@ pub fn router_root() -> Router {
         .route("/v1/tpost", post(tpost))
         .route("/v1/raw/put", post(raw_put))
         .route("/v1/raw/get", post(raw_get))
+        .route("/v1/raw/flushall", post(raw_flushall))
+        .route("/v1/raw/scan", post(raw_scan))
+        .route("/v1/currentconfig", post(current_config))
         .layer(middleware_stack);
     return root.nest("/api", api);
     // let router = root.merge(api);

@@ -1,0 +1,11 @@
+{
+  "scope": "tixuan",
+  "name": "tixuan",
+  "version": "",
+  "main": "./tixuan.dara",
+    "libraries": {
+    // 属性名 TestModule 是 dara 脚本 import 时使用的名字
+    // 属性值为远端模块的信息，格式为: scope:name:version
+    "Utile": "darabonba:Util"
+  }
+}

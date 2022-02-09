@@ -1,0 +1,54 @@
+import Util;
+
+type @endpoint_host = string
+type @protocol = string
+
+model Config {
+  endpoint: string,
+  protocol: string
+}
+
+init(config: Config){
+  @endpoint_host = config.endpoint;
+  @protocol = config.protocol;
+}
+
+model RawGetRequest {
+  Key: string,
+}
+
+model RawGetResponse{  
+	code: number,
+	msg: string,
+	data: string
+}
+
+api rawgetModule(pathname: string, query: RawGetRequest): RawGetResponse {
+  __request.protocol = @protocol;
+  __request.method = 'POST';
+  __request.pathname = `/api/v1/raw/get`;
+  __request.headers = {
+    host = @endpoint_host,
+    content-type = 'application/json; charset=utf-8'
+  };
+  __request.query = Util.toJSONString(query);  
+} returns {
+  var result = Util.assertAsMap(Util.readAsJSON(__response.body));
+
+  if (!Util.equalNumber(__response.statusCode, 200)) {
+    throw {
+      message = `code: ${__response.statusCode}, ${result.code} reason: ${result.msg}`,
+      code = `${result.code}`
+    };
+  }
+
+  if (!Util.assertAsBoolean(result.ok)) {
+    throw {
+      message = `code: ${result.status}, ${result.code} reason: ${result.msg}`,
+      code = `${result.code}`
+    };
+  }
+  return result;
+} runtime {
+  timeout = 1000 // 10s 的过期时间
+}

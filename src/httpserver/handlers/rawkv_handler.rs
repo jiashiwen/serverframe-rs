@@ -1,44 +1,31 @@
 use crate::httpserver::exception::{AppError, AppErrorType};
 use crate::httpserver::handlers::HandlerResult;
-use crate::httpserver::module::{Key, Response, KV};
-use crate::httpserver::service::{s_raw_get, s_raw_put};
+use crate::httpserver::module::{Key, ReqScan, Response, KV};
+use crate::httpserver::service::{s_raw_flush_all, s_raw_get, s_raw_put, s_raw_scan};
 use crate::resources::get_tikv_handler;
+use anyhow::Result;
 use axum::Json;
 use axum_debug::debug_handler;
 use serde_json::{json, Map, Value};
 
 #[axum_debug::debug_handler]
 pub async fn raw_put(Json(payload): Json<KV>) -> HandlerResult<()> {
-    if let Err(e) = s_raw_put(payload).await {
-        let err = AppError {
-            message: Some(e.to_string()),
-            cause: None,
-            error_type: AppErrorType::UnknowErr,
-        };
-        return Err(err);
+    let result = s_raw_put(payload).await;
+    log::info!("handle raw_put result: {:?}", result);
+    match result {
+        Ok(_) => Ok(Json(Response::ok(()))),
+        Err(e) => {
+            let err = AppError {
+                message: Some(e.to_string()),
+                cause: None,
+                error_type: AppErrorType::UnknowErr,
+            };
+            return Err(err);
+        }
     }
-    Ok(Json(Response::ok(())))
 }
 
 pub async fn raw_get(Json(payload): Json<Key>) -> HandlerResult<String> {
-    // let result = s_raw_get(payload.Key).await.map_err(|e| {
-    //     let err = AppError {
-    //         message: Some(e.to_string()),
-    //         cause: None,
-    //         error_type: AppErrorType::UnknowErr,
-    //     };
-    //     return Err(err);
-    // })?;
-
-    // if let Err(e) = s_raw_get(payload.Key).await {
-    //     let err = AppError {
-    //         message: Some(e.to_string()),
-    //         cause: None,
-    //         error_type: AppErrorType::UnknowErr,
-    //     };
-    //     return Err(err);
-    // }
-
     let result = s_raw_get(payload.Key).await;
     match result {
         Ok(str) => Ok(Json(Response::ok(str))),
@@ -51,5 +38,34 @@ pub async fn raw_get(Json(payload): Json<Key>) -> HandlerResult<String> {
             return Err(err);
         }
     }
-    // Ok(Json(Response::ok(result)))
+}
+
+pub async fn raw_flushall() -> HandlerResult<()> {
+    let result = s_raw_flush_all().await;
+    match result {
+        Ok(()) => Ok(Json(Response::ok(()))),
+        Err(e) => {
+            let err = AppError {
+                message: Some(e.to_string()),
+                cause: None,
+                error_type: AppErrorType::UnknowErr,
+            };
+            return Err(err);
+        }
+    }
+}
+
+pub async fn raw_scan(Json(req): Json<ReqScan>) -> HandlerResult<Vec<KV>> {
+    let result = s_raw_scan(req.begin, req.end, req.limited).await;
+    match result {
+        Ok(str) => Ok(Json(Response::ok(str))),
+        Err(e) => {
+            let err = AppError {
+                message: Some(e.to_string()),
+                cause: None,
+                error_type: AppErrorType::UnknowErr,
+            };
+            return Err(err);
+        }
+    }
 }

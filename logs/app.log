@@ -21,3 +21,980 @@
 2022-01-14T09:27:34.146290+08:00 - httpserver start
 2022-01-14T09:47:14.469717+08:00 - httpserver start
 2022-01-14T10:20:03.899598+08:00 - httpserver start
+2022-01-27T13:34:34.341004+08:00 - httpserver start
+2022-01-27T13:34:39.753852+08:00 - exec s_raw_put
+2022-01-27T13:34:39.754380+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:34:39.852450+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:34:39.852514+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:34:39.944236+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:34:40.040922+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:34:40.074485+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:34:40.074598+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:34:40.107723+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:34:40.210615+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T13:34:41.402083+08:00 - exec s_raw_put
+2022-01-27T13:34:43.691405+08:00 - exec s_raw_put
+2022-01-27T13:35:16.797954+08:00 - exec s_raw_put
+2022-01-27T13:35:16.798703+08:00 - exec s_raw_put
+2022-01-27T13:35:17.575221+08:00 - exec s_raw_put
+2022-01-27T13:35:18.561231+08:00 - exec s_raw_put
+2022-01-27T13:35:19.392707+08:00 - exec s_raw_put
+2022-01-27T13:35:20.089021+08:00 - exec s_raw_put
+2022-01-27T13:35:20.672018+08:00 - exec s_raw_put
+2022-01-27T13:35:21.191126+08:00 - exec s_raw_put
+2022-01-27T13:37:59.601246+08:00 - httpserver start
+2022-01-27T13:38:04.956374+08:00 - exec s_raw_put
+2022-01-27T13:38:04.956896+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:38:05.054718+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:38:05.054781+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:38:05.150143+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:38:05.254597+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:38:05.287940+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:38:05.288+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:38:06.998186+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:39:16.133375+08:00 - httpserver start
+2022-01-27T13:43:34.470312+08:00 - httpserver start
+2022-01-27T13:43:40.428126+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:43:40.527640+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:43:40.527703+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:43:40.625809+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:43:40.726667+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:43:40.761547+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:43:40.761610+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:43:40.794071+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:43:40.896287+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T13:43:43.133434+08:00 - exec s_raw_put
+2022-01-27T13:43:48.040117+08:00 - exec s_raw_put
+2022-01-27T13:43:48.755492+08:00 - exec s_raw_put
+2022-01-27T13:43:48.963572+08:00 - exec s_raw_put
+2022-01-27T13:43:49.123419+08:00 - exec s_raw_put
+2022-01-27T13:43:49.302192+08:00 - exec s_raw_put
+2022-01-27T13:43:49.507671+08:00 - exec s_raw_put
+2022-01-27T13:43:49.723719+08:00 - exec s_raw_put
+2022-01-27T13:43:49.882841+08:00 - exec s_raw_put
+2022-01-27T13:43:51.511031+08:00 - exec s_raw_put
+2022-01-27T13:43:51.511110+08:00 - exec s_raw_put
+2022-01-27T13:43:51.513699+08:00 - exec s_raw_put
+2022-01-27T13:43:58.528690+08:00 - exec s_raw_put
+2022-01-27T13:43:58.529240+08:00 - exec s_raw_put
+2022-01-27T13:43:58.732627+08:00 - exec s_raw_put
+2022-01-27T13:43:58.956638+08:00 - exec s_raw_put
+2022-01-27T13:43:59.176175+08:00 - exec s_raw_put
+2022-01-27T13:43:59.362245+08:00 - exec s_raw_put
+2022-01-27T13:43:59.542789+08:00 - exec s_raw_put
+2022-01-27T13:43:59.737531+08:00 - exec s_raw_put
+2022-01-27T13:43:59.948275+08:00 - exec s_raw_put
+2022-01-27T13:44:00.101948+08:00 - exec s_raw_put
+2022-01-27T13:44:00.300943+08:00 - exec s_raw_put
+2022-01-27T13:44:16.716386+08:00 - exec s_raw_put
+2022-01-27T13:44:17.371890+08:00 - exec s_raw_put
+2022-01-27T13:44:17.927173+08:00 - exec s_raw_put
+2022-01-27T13:44:18.381664+08:00 - exec s_raw_put
+2022-01-27T13:44:18.802848+08:00 - exec s_raw_put
+2022-01-27T13:44:19.018782+08:00 - exec s_raw_put
+2022-01-27T13:44:19.229382+08:00 - exec s_raw_put
+2022-01-27T13:44:19.914388+08:00 - exec s_raw_put
+2022-01-27T13:44:20.124436+08:00 - exec s_raw_put
+2022-01-27T13:44:20.295949+08:00 - exec s_raw_put
+2022-01-27T13:44:40.629239+08:00 - exec s_raw_put
+2022-01-27T13:44:40.630195+08:00 - exec s_raw_put
+2022-01-27T13:44:41.185024+08:00 - exec s_raw_put
+2022-01-27T13:44:41.393621+08:00 - exec s_raw_put
+2022-01-27T13:44:42.001589+08:00 - exec s_raw_put
+2022-01-27T13:44:42.240456+08:00 - exec s_raw_put
+2022-01-27T13:44:42.721016+08:00 - exec s_raw_put
+2022-01-27T13:44:43.343161+08:00 - exec s_raw_put
+2022-01-27T13:44:45.243998+08:00 - exec s_raw_put
+2022-01-27T13:44:46.240874+08:00 - exec s_raw_put
+2022-01-27T13:44:46.930387+08:00 - exec s_raw_put
+2022-01-27T13:47:46.360752+08:00 - httpserver start
+2022-01-27T13:47:50.819828+08:00 - exec s_raw_put
+2022-01-27T13:47:50.820365+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:47:50.918389+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:47:50.918492+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:47:51.016285+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:47:51.119728+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:47:51.152278+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:47:51.152335+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:47:51.187588+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:47:51.291346+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T13:47:52.116422+08:00 - exec s_raw_put
+2022-01-27T13:47:57.991459+08:00 - exec s_raw_put
+2022-01-27T13:47:58.763164+08:00 - exec s_raw_put
+2022-01-27T13:47:59.238803+08:00 - exec s_raw_put
+2022-01-27T13:47:59.896548+08:00 - exec s_raw_put
+2022-01-27T13:48:35.123102+08:00 - httpserver start
+2022-01-27T13:48:59.952708+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:49:00.061835+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:49:00.062017+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:49:00.154439+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:49:00.254909+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:49:00.290019+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:49:00.290149+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:49:02.487306+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:49:24.904305+08:00 - httpserver start
+2022-01-27T13:49:27.421368+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:49:27.528914+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:49:27.529090+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:49:27.628497+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:49:27.730777+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:49:27.764554+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:49:27.764676+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:49:27.798114+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:49:27.901031+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T13:49:28.002507+08:00 - result is ()
+2022-01-27T13:49:38.158791+08:00 - result is ()
+2022-01-27T13:49:39.042014+08:00 - result is ()
+2022-01-27T13:49:39.799425+08:00 - result is ()
+2022-01-27T13:49:41.013692+08:00 - result is ()
+2022-01-27T13:49:48.870754+08:00 - result is ()
+2022-01-27T13:49:49.610173+08:00 - result is ()
+2022-01-27T13:49:49.817001+08:00 - result is ()
+2022-01-27T13:53:31.511905+08:00 - httpserver start
+2022-01-27T13:53:38.829059+08:00 - exec s_raw_put
+2022-01-27T13:53:38.830204+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:53:38.936462+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:53:38.936636+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:53:39.045316+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:53:39.146383+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T13:53:39.180044+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T13:53:39.180156+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:53:39.213186+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T13:53:39.313751+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T13:53:39.416511+08:00 - result is ()
+2022-01-27T13:53:53.923987+08:00 - exec s_raw_put
+2022-01-27T13:53:53.958876+08:00 - result is ()
+2022-01-27T13:53:54.115006+08:00 - exec s_raw_put
+2022-01-27T13:53:54.150290+08:00 - result is ()
+2022-01-27T13:53:54.565857+08:00 - exec s_raw_put
+2022-01-27T13:53:54.601083+08:00 - result is ()
+2022-01-27T13:53:55.040571+08:00 - exec s_raw_put
+2022-01-27T13:53:55.074602+08:00 - result is ()
+2022-01-27T13:53:55.444438+08:00 - exec s_raw_put
+2022-01-27T13:53:55.479193+08:00 - result is ()
+2022-01-27T13:53:55.630741+08:00 - exec s_raw_put
+2022-01-27T13:53:55.665522+08:00 - result is ()
+2022-01-27T13:53:55.816424+08:00 - exec s_raw_put
+2022-01-27T13:53:55.851431+08:00 - result is ()
+2022-01-27T13:53:55.997470+08:00 - exec s_raw_put
+2022-01-27T13:53:56.031703+08:00 - result is ()
+2022-01-27T13:53:56.183229+08:00 - exec s_raw_put
+2022-01-27T13:53:56.223399+08:00 - result is ()
+2022-01-27T13:53:56.367253+08:00 - exec s_raw_put
+2022-01-27T13:53:56.401245+08:00 - result is ()
+2022-01-27T13:53:56.574003+08:00 - exec s_raw_put
+2022-01-27T13:53:56.608388+08:00 - result is ()
+2022-01-27T13:53:56.822867+08:00 - exec s_raw_put
+2022-01-27T13:53:56.860638+08:00 - result is ()
+2022-01-27T13:53:56.973470+08:00 - exec s_raw_put
+2022-01-27T13:53:57.007985+08:00 - result is ()
+2022-01-27T13:53:57.170516+08:00 - exec s_raw_put
+2022-01-27T13:53:57.204927+08:00 - result is ()
+2022-01-27T13:53:57.392177+08:00 - exec s_raw_put
+2022-01-27T13:53:57.427286+08:00 - result is ()
+2022-01-27T13:53:57.634802+08:00 - exec s_raw_put
+2022-01-27T13:53:57.669350+08:00 - result is ()
+2022-01-27T13:54:29.976383+08:00 - exec s_raw_put
+2022-01-27T13:54:30.012215+08:00 - result is ()
+2022-01-27T13:54:30.722587+08:00 - exec s_raw_put
+2022-01-27T13:54:30.758637+08:00 - result is ()
+2022-01-27T13:54:31.512003+08:00 - exec s_raw_put
+2022-01-27T13:54:31.547877+08:00 - result is ()
+2022-01-27T13:54:32.376076+08:00 - exec s_raw_put
+2022-01-27T13:54:32.411157+08:00 - result is ()
+2022-01-27T13:54:33.075735+08:00 - exec s_raw_put
+2022-01-27T13:54:33.076766+08:00 - exec s_raw_put
+2022-01-27T13:54:33.945195+08:00 - exec s_raw_put
+2022-01-27T13:54:34.808940+08:00 - exec s_raw_put
+2022-01-27T13:54:35.554250+08:00 - exec s_raw_put
+2022-01-27T14:16:19.515049+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:16:19.614112+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:16:19.614295+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:16:19.718146+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:16:19.830841+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:16:19.865398+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:16:19.865611+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:16:19.900006+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:16:20.003184+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:16:20.108034+08:00 - httpserver start
+2022-01-27T14:16:30.191466+08:00 - exec s_raw_put
+2022-01-27T14:16:30.226402+08:00 - result is ()
+2022-01-27T14:16:30.985929+08:00 - exec s_raw_put
+2022-01-27T14:16:31.020088+08:00 - result is ()
+2022-01-27T14:16:31.872523+08:00 - exec s_raw_put
+2022-01-27T14:16:31.906985+08:00 - result is ()
+2022-01-27T14:16:32.419945+08:00 - exec s_raw_put
+2022-01-27T14:16:32.454463+08:00 - result is ()
+2022-01-27T14:16:32.634392+08:00 - exec s_raw_put
+2022-01-27T14:16:32.668445+08:00 - result is ()
+2022-01-27T14:16:32.835223+08:00 - exec s_raw_put
+2022-01-27T14:16:32.869441+08:00 - result is ()
+2022-01-27T14:16:33.044584+08:00 - exec s_raw_put
+2022-01-27T14:16:33.079339+08:00 - result is ()
+2022-01-27T14:16:33.246728+08:00 - exec s_raw_put
+2022-01-27T14:16:33.281018+08:00 - result is ()
+2022-01-27T14:16:33.390011+08:00 - exec s_raw_put
+2022-01-27T14:16:33.423847+08:00 - result is ()
+2022-01-27T14:16:33.553053+08:00 - exec s_raw_put
+2022-01-27T14:16:33.587185+08:00 - result is ()
+2022-01-27T14:16:34.021633+08:00 - exec s_raw_put
+2022-01-27T14:16:34.055515+08:00 - result is ()
+2022-01-27T14:16:34.608153+08:00 - exec s_raw_put
+2022-01-27T14:16:34.641750+08:00 - result is ()
+2022-01-27T14:16:34.813012+08:00 - exec s_raw_put
+2022-01-27T14:16:34.848657+08:00 - result is ()
+2022-01-27T14:16:46.099487+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:16:46.205374+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:16:46.205558+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:16:46.309711+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:16:46.415274+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:16:46.449257+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:16:46.449470+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:16:46.482715+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:16:46.584943+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:16:46.722929+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:16:48.729050+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:17:18.513084+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:17:20.517256+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:17:26.100203+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:17:26.203480+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:17:26.203662+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:17:26.302155+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:17:26.398790+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:17:26.432194+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:17:26.432376+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:17:26.465226+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:17:26.565722+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:17:26.701945+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:17:28.706747+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:18:05.463593+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:18:05.559763+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:18:05.559949+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:18:05.669282+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:18:05.767168+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:18:05.799086+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:18:05.799295+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:18:05.831765+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:18:05.929019+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:18:06.061745+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:18:08.066902+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:18:16.659384+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:18:18.664979+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:18:22.565320+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:18:24.572448+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:18:57.303346+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:18:57.401450+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:18:57.401685+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:18:57.498155+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:18:57.596646+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:18:57.628865+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:18:57.629008+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:18:57.661887+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:18:57.761065+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:18:57.861278+08:00 - httpserver start
+2022-01-27T14:19:13.441560+08:00 - exec s_raw_put
+2022-01-27T14:19:13.475739+08:00 - result is ()
+2022-01-27T14:19:14.352405+08:00 - exec s_raw_put
+2022-01-27T14:19:14.386794+08:00 - result is ()
+2022-01-27T14:19:21.215376+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:19:21.317219+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:19:21.317448+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:19:21.419272+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:19:21.517675+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:19:21.552079+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:19:21.552288+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:19:21.585323+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:19:21.688745+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:19:21.830454+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:19:23.837443+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:20:20.633388+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:20:20.731310+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:20:20.731495+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:20:20.827811+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:20:20.933499+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:20:20.967403+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:20:20.967553+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:20:21.004535+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:20:21.109655+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:20:21.251626+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:20:23.254813+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:22:04.944597+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:22:05.045078+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:22:05.045262+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:22:05.144012+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:22:05.246760+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:22:05.280594+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:22:05.280705+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:22:05.314010+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:22:05.420425+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:22:05.524382+08:00 - httpserver start
+2022-01-27T14:22:18.984063+08:00 - exec s_raw_put
+2022-01-27T14:22:19.018829+08:00 - result is ()
+2022-01-27T14:22:19.809008+08:00 - exec s_raw_put
+2022-01-27T14:22:19.844665+08:00 - result is ()
+2022-01-27T14:24:14.850320+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:24:14.953886+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:24:14.954128+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:24:15.054503+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:24:15.156932+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:24:15.192966+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:24:15.193060+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:24:15.225230+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:24:15.329867+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:24:15.471518+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:24:17.478770+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:26:00.800568+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:26:00.903284+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:26:00.903469+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:26:01.007584+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:26:01.120785+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:26:01.154854+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:26:01.155+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:26:01.188376+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:26:01.289901+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:26:01.428749+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:26:03.436323+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 4-DEADLINE_EXCEEDED, message: "Deadline Exceeded", details: [] }))
+2022-01-27T14:28:34.312097+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:28:34.414257+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:28:34.414475+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:28:34.511723+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:28:34.612802+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:28:34.646598+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:28:34.646749+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:28:34.682502+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:28:34.786268+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:28:34.889822+08:00 - httpserver start
+2022-01-27T14:28:47.018399+08:00 - exec s_raw_put
+2022-01-27T14:28:47.059574+08:00 - result is ()
+2022-01-27T14:28:48.208130+08:00 - exec s_raw_put
+2022-01-27T14:28:48.242011+08:00 - result is ()
+2022-01-27T14:28:48.429619+08:00 - exec s_raw_put
+2022-01-27T14:28:48.465839+08:00 - result is ()
+2022-01-27T14:28:48.985061+08:00 - exec s_raw_put
+2022-01-27T14:28:49.021319+08:00 - result is ()
+2022-01-27T14:28:49.217136+08:00 - exec s_raw_put
+2022-01-27T14:28:49.254061+08:00 - result is ()
+2022-01-27T14:28:49.401656+08:00 - exec s_raw_put
+2022-01-27T14:28:49.435388+08:00 - result is ()
+2022-01-27T14:28:49.581010+08:00 - exec s_raw_put
+2022-01-27T14:28:49.614952+08:00 - result is ()
+2022-01-27T14:28:49.762758+08:00 - exec s_raw_put
+2022-01-27T14:28:49.801600+08:00 - result is ()
+2022-01-27T14:28:49.918781+08:00 - exec s_raw_put
+2022-01-27T14:28:49.953133+08:00 - result is ()
+2022-01-27T14:28:50.086900+08:00 - exec s_raw_put
+2022-01-27T14:28:50.120493+08:00 - result is ()
+2022-01-27T14:28:50.284838+08:00 - exec s_raw_put
+2022-01-27T14:28:50.318682+08:00 - result is ()
+2022-01-27T14:28:50.543187+08:00 - exec s_raw_put
+2022-01-27T14:28:50.577357+08:00 - result is ()
+2022-01-27T14:28:54.240706+08:00 - exec s_raw_put
+2022-01-27T14:28:54.274184+08:00 - result is ()
+2022-01-27T14:28:54.949625+08:00 - exec s_raw_put
+2022-01-27T14:28:54.983052+08:00 - result is ()
+2022-01-27T14:28:55.164060+08:00 - exec s_raw_put
+2022-01-27T14:28:55.197452+08:00 - result is ()
+2022-01-27T14:28:55.381287+08:00 - exec s_raw_put
+2022-01-27T14:28:55.415731+08:00 - result is ()
+2022-01-27T14:28:57.750294+08:00 - exec s_raw_put
+2022-01-27T14:28:57.750364+08:00 - exec s_raw_put
+2022-01-27T14:28:57.750431+08:00 - exec s_raw_put
+2022-01-27T14:28:57.750488+08:00 - exec s_raw_put
+2022-01-27T14:28:57.756080+08:00 - exec s_raw_put
+2022-01-27T14:28:58.689099+08:00 - exec s_raw_put
+2022-01-27T14:28:59.231079+08:00 - exec s_raw_put
+2022-01-27T14:29:23.779442+08:00 - exec s_raw_put
+2022-01-27T14:29:24.443707+08:00 - exec s_raw_put
+2022-01-27T14:29:24.997528+08:00 - exec s_raw_put
+2022-01-27T14:29:25.462567+08:00 - exec s_raw_put
+2022-01-27T14:29:25.680951+08:00 - exec s_raw_put
+2022-01-27T14:29:25.901073+08:00 - exec s_raw_put
+2022-01-27T14:29:26.114561+08:00 - exec s_raw_put
+2022-01-27T14:29:36.528095+08:00 - exec s_raw_put
+2022-01-27T14:29:36.529080+08:00 - exec s_raw_put
+2022-01-27T14:29:37.459926+08:00 - exec s_raw_put
+2022-01-27T14:30:23.240456+08:00 - exec s_raw_put
+2022-01-27T14:30:24.069275+08:00 - exec s_raw_put
+2022-01-27T14:30:25.063971+08:00 - exec s_raw_put
+2022-01-27T14:35:27.037552+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:35:27.139158+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:35:27.139391+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:35:27.240635+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:35:27.338475+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:35:27.371875+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:35:27.372091+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:35:27.404844+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:35:27.509224+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:35:27.612358+08:00 - httpserver start
+2022-01-27T14:35:41.720627+08:00 - exec s_raw_put
+2022-01-27T14:35:41.754479+08:00 - result is ()
+2022-01-27T14:35:43.775577+08:00 - exec s_raw_put
+2022-01-27T14:35:43.811393+08:00 - result is ()
+2022-01-27T14:35:44.292704+08:00 - exec s_raw_put
+2022-01-27T14:35:44.328173+08:00 - result is ()
+2022-01-27T14:35:44.766532+08:00 - exec s_raw_put
+2022-01-27T14:35:44.803516+08:00 - result is ()
+2022-01-27T14:35:45.490800+08:00 - exec s_raw_put
+2022-01-27T14:35:45.524513+08:00 - result is ()
+2022-01-27T14:35:46.175094+08:00 - exec s_raw_put
+2022-01-27T14:35:46.209337+08:00 - result is ()
+2022-01-27T14:35:46.665444+08:00 - exec s_raw_put
+2022-01-27T14:35:46.699975+08:00 - result is ()
+2022-01-27T14:35:47.533727+08:00 - exec s_raw_put
+2022-01-27T14:35:47.567638+08:00 - result is ()
+2022-01-27T14:35:47.754086+08:00 - exec s_raw_put
+2022-01-27T14:35:47.789705+08:00 - result is ()
+2022-01-27T14:35:47.957824+08:00 - exec s_raw_put
+2022-01-27T14:35:47.991331+08:00 - result is ()
+2022-01-27T14:35:49.077361+08:00 - exec s_raw_put
+2022-01-27T14:35:49.110596+08:00 - result is ()
+2022-01-27T14:35:49.801675+08:00 - exec s_raw_put
+2022-01-27T14:35:49.835632+08:00 - result is ()
+2022-01-27T14:35:50.393354+08:00 - exec s_raw_put
+2022-01-27T14:35:50.427643+08:00 - result is ()
+2022-01-27T14:35:51.672950+08:00 - exec s_raw_put
+2022-01-27T14:35:51.706463+08:00 - result is ()
+2022-01-27T14:35:52.271101+08:00 - exec s_raw_put
+2022-01-27T14:35:52.304685+08:00 - result is ()
+2022-01-27T14:35:52.843065+08:00 - exec s_raw_put
+2022-01-27T14:35:52.876846+08:00 - result is ()
+2022-01-27T14:35:53.242542+08:00 - exec s_raw_put
+2022-01-27T14:35:53.413996+08:00 - result is ()
+2022-01-27T14:35:53.510244+08:00 - exec s_raw_put
+2022-01-27T14:35:53.682030+08:00 - exec s_raw_put
+2022-01-27T14:35:53.682175+08:00 - result is ()
+2022-01-27T14:35:53.742396+08:00 - result is ()
+2022-01-27T14:35:54.490066+08:00 - exec s_raw_put
+2022-01-27T14:35:54.619649+08:00 - result is ()
+2022-01-27T14:36:16.534582+08:00 - exec s_raw_put
+2022-01-27T14:36:16.535579+08:00 - exec s_raw_put
+2022-01-27T14:36:16.536500+08:00 - exec s_raw_put
+2022-01-27T14:36:17.096364+08:00 - exec s_raw_put
+2022-01-27T14:36:17.306946+08:00 - exec s_raw_put
+2022-01-27T14:37:07.055914+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:37:07.157636+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:37:07.157842+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:37:07.257670+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:37:07.357858+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:37:07.396923+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:37:07.397066+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:37:07.429725+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:37:07.537832+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:37:19.172943+08:00 - exec s_raw_put
+2022-01-27T14:37:20.342008+08:00 - exec s_raw_put
+2022-01-27T14:37:21.013399+08:00 - exec s_raw_put
+2022-01-27T14:37:21.741886+08:00 - exec s_raw_put
+2022-01-27T14:37:22.665642+08:00 - exec s_raw_put
+2022-01-27T14:37:23.528676+08:00 - exec s_raw_put
+2022-01-27T14:37:30.718339+08:00 - exec s_raw_put
+2022-01-27T14:37:30.719208+08:00 - exec s_raw_put
+2022-01-27T14:37:31.416510+08:00 - exec s_raw_put
+2022-01-27T14:37:31.629351+08:00 - exec s_raw_put
+2022-01-27T14:37:31.878418+08:00 - exec s_raw_put
+2022-01-27T14:37:32.363109+08:00 - exec s_raw_put
+2022-01-27T14:37:32.590210+08:00 - exec s_raw_put
+2022-01-27T14:37:50.565186+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:37:50.665096+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:37:50.665230+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:37:50.764121+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:37:50.858765+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:37:50.891150+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:37:50.891338+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:37:50.923108+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:37:51.019975+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:38:00.081227+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:00.182034+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:00.182256+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:00.284577+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:00.383970+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:00.417305+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:00.417518+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:00.451040+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:00.551866+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:38:14.825841+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:14.928991+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:14.929189+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:15.029072+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:15.123513+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:15.156017+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:15.156165+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:15.188731+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:15.291496+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:38:17.271206+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:17.375091+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:17.375310+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:17.478682+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:17.578850+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:17.612687+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:17.612897+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:17.646451+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:17.751315+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:38:19.767052+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:19.875190+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:19.875426+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:19.972294+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:20.077612+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:20.112639+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:20.112788+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:20.146534+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:20.249514+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:38:29.818074+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:29.920487+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:29.920707+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:30.048544+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:30.158167+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:30.195530+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:30.195683+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:30.232610+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:30.350200+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:38:32.391621+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:32.495263+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:32.495532+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:32.590500+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:32.696874+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:32.731716+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:32.731863+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:32.765461+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:32.876737+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:38:51.022956+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:51.130871+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:51.131060+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:51.232296+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:51.337136+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:38:51.370668+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:38:51.370771+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:51.405340+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:38:51.514045+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:39:03.417759+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:39:03.523028+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:39:03.523248+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:03.624002+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:03.725825+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:39:03.757851+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:39:03.758168+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:03.792978+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:03.895993+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:39:05.033326+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:39:05.133221+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:39:05.133402+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:05.228316+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:05.329362+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:39:05.364047+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:39:05.364195+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:05.398145+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:05.503410+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:39:06.467310+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:39:06.568349+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:39:06.568528+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:06.667650+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:06.770642+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:39:06.804077+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:39:06.804187+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:06.837827+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:39:06.943409+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:40:02.394648+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:40:02.499502+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:40:02.499739+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:02.601207+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:02.711296+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:40:02.744660+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:40:02.744773+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:02.778945+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:02.882339+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:40:04.689077+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:40:04.791124+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:40:04.791311+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:04.891453+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:05.113128+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:40:05.146842+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:40:05.146973+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:05.183581+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:05.288810+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:40:49.071027+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:40:49.171965+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:40:49.172145+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:49.271239+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:49.370741+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:40:49.408163+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:40:49.408308+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:49.442142+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:40:49.545407+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:40:49.646898+08:00 - httpserver start
+2022-01-27T14:40:53.168925+08:00 - exec s_raw_put
+2022-01-27T14:40:53.203108+08:00 - result is ()
+2022-01-27T14:40:53.203191+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:40:54.124933+08:00 - exec s_raw_put
+2022-01-27T14:40:54.274032+08:00 - result is ()
+2022-01-27T14:40:54.274115+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:40:54.381470+08:00 - exec s_raw_put
+2022-01-27T14:40:54.525819+08:00 - exec s_raw_put
+2022-01-27T14:40:54.526762+08:00 - result is ()
+2022-01-27T14:40:54.526822+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:40:54.561490+08:00 - result is ()
+2022-01-27T14:40:54.561582+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:00.183361+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:41:00.286298+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:41:00.286513+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:41:00.387718+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:41:00.490129+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:41:00.523020+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:41:00.523172+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:41:00.558738+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:41:00.670248+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:41:00.776601+08:00 - httpserver start
+2022-01-27T14:41:03.896083+08:00 - exec s_raw_put
+2022-01-27T14:41:03.932647+08:00 - result is ()
+2022-01-27T14:41:03.932750+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:04.732411+08:00 - exec s_raw_put
+2022-01-27T14:41:04.768640+08:00 - result is ()
+2022-01-27T14:41:04.768710+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:05.487897+08:00 - exec s_raw_put
+2022-01-27T14:41:05.523665+08:00 - result is ()
+2022-01-27T14:41:05.523847+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:06.184744+08:00 - exec s_raw_put
+2022-01-27T14:41:06.221483+08:00 - result is ()
+2022-01-27T14:41:06.221580+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:06.875199+08:00 - exec s_raw_put
+2022-01-27T14:41:06.913400+08:00 - result is ()
+2022-01-27T14:41:06.913476+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:07.542418+08:00 - exec s_raw_put
+2022-01-27T14:41:07.590510+08:00 - result is ()
+2022-01-27T14:41:07.590613+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:08.279099+08:00 - exec s_raw_put
+2022-01-27T14:41:08.314039+08:00 - result is ()
+2022-01-27T14:41:08.314139+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:19.803582+08:00 - exec s_raw_put
+2022-01-27T14:41:19.839568+08:00 - result is ()
+2022-01-27T14:41:19.839659+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:20.370470+08:00 - exec s_raw_put
+2022-01-27T14:41:20.405316+08:00 - result is ()
+2022-01-27T14:41:20.405427+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:25.083183+08:00 - exec s_raw_put
+2022-01-27T14:41:25.119561+08:00 - result is ()
+2022-01-27T14:41:25.119656+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:25.681893+08:00 - exec s_raw_put
+2022-01-27T14:41:25.716197+08:00 - result is ()
+2022-01-27T14:41:25.716274+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:26.352648+08:00 - exec s_raw_put
+2022-01-27T14:41:26.387223+08:00 - result is ()
+2022-01-27T14:41:27.466078+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:41:29.104267+08:00 - exec s_raw_put
+2022-01-27T14:41:29.105321+08:00 - exec s_raw_put
+2022-01-27T14:41:30.574507+08:00 - exec s_raw_put
+2022-01-27T14:41:31.160848+08:00 - exec s_raw_put
+2022-01-27T14:41:31.750941+08:00 - exec s_raw_put
+2022-01-27T14:41:32.321660+08:00 - exec s_raw_put
+2022-01-27T14:41:32.853570+08:00 - exec s_raw_put
+2022-01-27T14:41:33.724733+08:00 - exec s_raw_put
+2022-01-27T14:41:34.437929+08:00 - exec s_raw_put
+2022-01-27T14:41:35.139557+08:00 - exec s_raw_put
+2022-01-27T14:41:35.838602+08:00 - exec s_raw_put
+2022-01-27T14:41:36.533454+08:00 - exec s_raw_put
+2022-01-27T14:41:37.183961+08:00 - exec s_raw_put
+2022-01-27T14:41:37.772529+08:00 - exec s_raw_put
+2022-01-27T14:41:38.296800+08:00 - exec s_raw_put
+2022-01-27T14:41:38.728823+08:00 - exec s_raw_put
+2022-01-27T14:41:48.852169+08:00 - exec s_raw_put
+2022-01-27T14:45:15.539072+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:45:15.642868+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:45:15.643060+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:45:15.751837+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:45:15.850471+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:45:15.884614+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:45:15.884732+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:45:15.917071+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:45:16.025998+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:46:00.524220+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:46:00.623180+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:46:00.623402+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:46:00.725345+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:46:00.825014+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:46:00.859139+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:46:00.859288+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:46:00.892923+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:46:00.996322+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:46:01.098838+08:00 - httpserver start
+2022-01-27T14:46:07.366777+08:00 - exec s_raw_put
+2022-01-27T14:46:07.404677+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:46:08.264286+08:00 - exec s_raw_put
+2022-01-27T14:46:08.298308+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:46:09.205014+08:00 - exec s_raw_put
+2022-01-27T14:46:09.241685+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:46:10.178436+08:00 - exec s_raw_put
+2022-01-27T14:46:10.212663+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:46:21.250938+08:00 - exec s_raw_put
+2022-01-27T14:46:21.252091+08:00 - exec s_raw_put
+2022-01-27T14:46:45.923025+08:00 - exec s_raw_put
+2022-01-27T14:46:45.923982+08:00 - exec s_raw_put
+2022-01-27T14:46:46.725993+08:00 - exec s_raw_put
+2022-01-27T14:46:47.390509+08:00 - exec s_raw_put
+2022-01-27T14:46:48.502951+08:00 - exec s_raw_put
+2022-01-27T14:52:55.921605+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:52:56.024670+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:52:56.024893+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:52:56.132794+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:52:56.235505+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T14:52:56.274391+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T14:52:56.274599+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:52:56.306522+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T14:52:56.410044+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T14:52:56.513544+08:00 - httpserver start
+2022-01-27T14:53:02.697613+08:00 - exec s_raw_put
+2022-01-27T14:53:02.733370+08:00 - tikv result: Ok(())
+2022-01-27T14:53:02.733451+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:53:03.564837+08:00 - exec s_raw_put
+2022-01-27T14:53:03.600310+08:00 - tikv result: Ok(())
+2022-01-27T14:53:03.600383+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:53:03.787472+08:00 - exec s_raw_put
+2022-01-27T14:53:03.825968+08:00 - tikv result: Ok(())
+2022-01-27T14:53:03.826048+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:53:09.419517+08:00 - exec s_raw_put
+2022-01-27T14:53:09.464945+08:00 - tikv result: Ok(())
+2022-01-27T14:53:09.465033+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:53:10.250482+08:00 - exec s_raw_put
+2022-01-27T14:53:10.285135+08:00 - tikv result: Ok(())
+2022-01-27T14:53:10.285214+08:00 - handle raw_put result: Ok(())
+2022-01-27T14:53:10.810717+08:00 - exec s_raw_put
+2022-01-27T14:53:10.811749+08:00 - exec s_raw_put
+2022-01-27T14:53:12.262989+08:00 - exec s_raw_put
+2022-01-27T14:53:12.510886+08:00 - exec s_raw_put
+2022-01-27T14:53:13.131475+08:00 - exec s_raw_put
+2022-01-27T14:53:17.047133+08:00 - exec s_raw_put
+2022-01-27T14:53:17.727428+08:00 - exec s_raw_put
+2022-01-27T14:53:18.387864+08:00 - exec s_raw_put
+2022-01-27T14:53:18.981985+08:00 - exec s_raw_put
+2022-01-27T14:53:19.587828+08:00 - exec s_raw_put
+2022-01-27T14:53:20.750684+08:00 - exec s_raw_put
+2022-01-27T14:53:21.398426+08:00 - exec s_raw_put
+2022-01-27T14:53:21.674702+08:00 - exec s_raw_put
+2022-01-27T16:01:57.951430+08:00 - invoke get_tikv_handler
+2022-01-27T16:01:57.952632+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T16:01:58.052186+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T16:01:58.052402+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:01:58.151589+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:01:58.252974+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T16:01:58.287683+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T16:01:58.287869+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:01:58.321514+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:01:58.424279+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T16:02:37.365985+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:37.367250+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T16:02:37.470326+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T16:02:37.470526+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:02:37.567503+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:02:37.666760+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T16:02:37.699747+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T16:02:37.699951+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:02:37.736479+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:02:37.836735+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T16:02:37.941493+08:00 - httpserver start
+2022-01-27T16:02:43.853868+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:44.961392+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:53.469192+08:00 - exec s_raw_put
+2022-01-27T16:02:53.469265+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:53.504111+08:00 - tikv result: Ok(())
+2022-01-27T16:02:53.504195+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:54.641111+08:00 - exec s_raw_put
+2022-01-27T16:02:54.641188+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:54.676339+08:00 - tikv result: Ok(())
+2022-01-27T16:02:54.676412+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:55.252520+08:00 - exec s_raw_put
+2022-01-27T16:02:55.252634+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:55.287325+08:00 - tikv result: Ok(())
+2022-01-27T16:02:55.287404+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:55.805596+08:00 - exec s_raw_put
+2022-01-27T16:02:55.805673+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:55.842815+08:00 - tikv result: Ok(())
+2022-01-27T16:02:55.842908+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:56.046602+08:00 - exec s_raw_put
+2022-01-27T16:02:56.046678+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:56.080941+08:00 - tikv result: Ok(())
+2022-01-27T16:02:56.081021+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:56.217048+08:00 - exec s_raw_put
+2022-01-27T16:02:56.217172+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:56.252634+08:00 - tikv result: Ok(())
+2022-01-27T16:02:56.252708+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:56.375339+08:00 - exec s_raw_put
+2022-01-27T16:02:56.375410+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:56.409538+08:00 - tikv result: Ok(())
+2022-01-27T16:02:56.409655+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:56.863205+08:00 - exec s_raw_put
+2022-01-27T16:02:56.863278+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:56.897632+08:00 - tikv result: Ok(())
+2022-01-27T16:02:56.897732+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:57.474264+08:00 - exec s_raw_put
+2022-01-27T16:02:57.474334+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:57.508365+08:00 - tikv result: Ok(())
+2022-01-27T16:02:57.508449+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:58.238374+08:00 - exec s_raw_put
+2022-01-27T16:02:58.238463+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:58.272715+08:00 - tikv result: Ok(())
+2022-01-27T16:02:58.272793+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:58.949415+08:00 - exec s_raw_put
+2022-01-27T16:02:58.949487+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:58.984504+08:00 - tikv result: Ok(())
+2022-01-27T16:02:58.984587+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:02:59.639329+08:00 - exec s_raw_put
+2022-01-27T16:02:59.639403+08:00 - invoke get_tikv_handler
+2022-01-27T16:02:59.690620+08:00 - tikv result: Ok(())
+2022-01-27T16:02:59.690732+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:03:06.896554+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:06.897663+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T16:03:07.004770+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T16:03:07.004958+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:03:07.107016+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:03:07.211712+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-27T16:03:07.245864+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-27T16:03:07.246006+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:03:07.281635+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-27T16:03:07.383606+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-27T16:03:07.488878+08:00 - httpserver start
+2022-01-27T16:03:11.136608+08:00 - exec s_raw_put
+2022-01-27T16:03:11.136681+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:11.172720+08:00 - tikv result: Ok(())
+2022-01-27T16:03:11.172816+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:03:11.840570+08:00 - exec s_raw_put
+2022-01-27T16:03:11.840648+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:11.876929+08:00 - tikv result: Ok(())
+2022-01-27T16:03:11.877005+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:03:15.665515+08:00 - exec s_raw_put
+2022-01-27T16:03:15.665585+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:15.701087+08:00 - tikv result: Ok(())
+2022-01-27T16:03:15.701169+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:03:20.874841+08:00 - exec s_raw_put
+2022-01-27T16:03:20.874911+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:20.909220+08:00 - tikv result: Ok(())
+2022-01-27T16:03:20.909325+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:03:30.606836+08:00 - exec s_raw_put
+2022-01-27T16:03:30.606906+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:30.641674+08:00 - tikv result: Ok(())
+2022-01-27T16:03:30.641794+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:03:31.660020+08:00 - exec s_raw_put
+2022-01-27T16:03:31.660091+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:31.694324+08:00 - tikv result: Ok(())
+2022-01-27T16:03:31.694407+08:00 - handle raw_put result: Ok(())
+2022-01-27T16:03:32.966705+08:00 - exec s_raw_put
+2022-01-27T16:03:32.966918+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:32.969297+08:00 - exec s_raw_put
+2022-01-27T16:03:32.969387+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:33.743499+08:00 - exec s_raw_put
+2022-01-27T16:03:33.743573+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:37.298587+08:00 - exec s_raw_put
+2022-01-27T16:03:37.298664+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:38.199440+08:00 - exec s_raw_put
+2022-01-27T16:03:38.199513+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:39.124735+08:00 - exec s_raw_put
+2022-01-27T16:03:39.124809+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:39.924665+08:00 - exec s_raw_put
+2022-01-27T16:03:39.924743+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:45.121401+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:45.911706+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:46.787067+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:47.249989+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:47.859123+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:48.506176+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:48.743267+08:00 - invoke get_tikv_handler
+2022-01-27T16:03:48.960820+08:00 - invoke get_tikv_handler
+2022-01-27T16:04:08.345101+08:00 - exec s_raw_put
+2022-01-27T16:04:08.345182+08:00 - invoke get_tikv_handler
+2022-01-27T16:04:08.346189+08:00 - exec s_raw_put
+2022-01-27T16:04:08.346299+08:00 - invoke get_tikv_handler
+2022-01-27T16:04:09.337556+08:00 - exec s_raw_put
+2022-01-27T16:04:09.337673+08:00 - invoke get_tikv_handler
+2022-01-27T16:04:09.982535+08:00 - exec s_raw_put
+2022-01-27T16:04:09.982610+08:00 - invoke get_tikv_handler
+2022-01-27T16:04:10.732110+08:00 - exec s_raw_put
+2022-01-27T16:04:10.732188+08:00 - invoke get_tikv_handler
+2022-01-27T16:04:11.412816+08:00 - exec s_raw_put
+2022-01-27T16:04:11.412895+08:00 - invoke get_tikv_handler
+2022-01-27T16:04:12.121871+08:00 - exec s_raw_put
+2022-01-27T16:04:12.121946+08:00 - invoke get_tikv_handler
+2022-01-28T10:10:35.518908+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-28T10:10:35.616971+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-28T10:10:35.617160+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-28T10:10:35.729112+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-28T10:10:35.835079+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-01-28T10:10:35.868413+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-01-28T10:10:35.868575+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-28T10:10:35.902669+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-01-28T10:10:36.009323+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-01-28T10:10:36.115318+08:00 - httpserver start
+2022-01-28T10:12:44.904893+08:00 - exec s_raw_put
+2022-01-28T10:12:44.939721+08:00 - tikv result: Ok(())
+2022-01-28T10:12:44.939844+08:00 - handle raw_put result: Ok(())
+2022-02-07T11:40:17.651843+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-07T11:40:17.686952+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-02-07T11:44:56.197794+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-07T11:44:56.235780+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-02-07T11:44:58.942130+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-07T11:44:58.979523+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-02-07T11:45:00.592083+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-07T11:45:00.625768+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-02-07T11:45:02.371122+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-07T11:45:02.405477+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-02-07T11:45:04.295740+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-07T11:45:04.335596+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-02-07T11:47:18.098312+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-07T11:47:18.208865+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-07T11:47:18.209060+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-07T11:47:18.321461+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-07T11:47:18.423088+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-07T11:47:18.454530+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-07T11:47:18.454647+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-07T11:47:18.487490+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-07T11:47:18.585508+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-02-07T11:47:18.691475+08:00 - httpserver start
+2022-02-09T10:20:31.210730+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T10:20:31.245382+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-02-09T10:24:57.003466+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T10:24:57.109032+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-09T10:24:57.109184+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T10:24:57.212788+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T10:24:57.308823+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T10:24:57.342+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-09T10:24:57.342097+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T10:24:57.373092+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T10:24:57.485199+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-02-09T10:24:57.586681+08:00 - httpserver start
+2022-02-09T15:37:17.946973+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T15:37:18.052764+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-09T15:37:18.052958+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:37:18.183024+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:37:18.303301+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T15:37:18.349045+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-09T15:37:18.349222+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:37:18.390510+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:37:18.506461+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-02-09T15:37:18.625850+08:00 - httpserver start
+2022-02-09T15:38:08.170883+08:00 - handle raw_put result: Ok(())
+2022-02-09T15:52:33.528074+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T15:52:33.649447+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-09T15:52:33.649640+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:52:33.752889+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:52:33.893553+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T15:52:34.001700+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-09T15:52:34.001914+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:52:34.041740+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:52:34.224391+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-02-09T15:52:34.353946+08:00 - httpserver start
+2022-02-09T15:53:01.299021+08:00 - handle raw_put result: Ok(())
+2022-02-09T15:55:51.161165+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T15:55:51.298908+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-09T15:55:51.299094+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:55:51.442924+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:55:51.569847+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-09T15:55:51.620077+08:00 - All PD endpoints are consistent: ["114.67.120.120:2379"]
+2022-02-09T15:55:51.620286+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:55:51.654758+08:00 - connect to rpc server at endpoint: "http://114.67.120.120:2379"
+2022-02-09T15:55:51.794918+08:00 - connect to rpc server at endpoint: "114.67.120.120:20160"
+2022-02-09T15:55:51.953376+08:00 - httpserver start
+2022-02-09T15:56:00.676153+08:00 - []
+2022-02-09T15:56:17.900860+08:00 - [KvPair(32, "太玄")]
+2022-02-09T15:56:34.470938+08:00 - [KvPair(32, "太玄")]
+2022-02-09T15:56:46.286034+08:00 - []
+2022-02-09T15:59:26.702053+08:00 - handle raw_put result: Ok(())
+2022-02-09T15:59:31.966336+08:00 - handle raw_put result: Ok(())
+2022-02-09T15:59:36.272067+08:00 - handle raw_put result: Ok(())
+2022-02-09T15:59:41.957787+08:00 - []
+2022-02-09T15:59:55.008261+08:00 - [KvPair(61, "a"), KvPair(62, "ab"), KvPair(63, "abc")]
+2022-02-09T16:03:54.146395+08:00 - [KvPair(61, "a"), KvPair(62, "ab"), KvPair(63, "abc")]

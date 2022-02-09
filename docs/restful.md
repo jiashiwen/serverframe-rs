@@ -34,6 +34,44 @@
 }
 ```
 
+## /api/v1/raw/prefix
+
+* POST
+
+```
+{ 
+    "prefix": xxx,
+    "limit" xx,
+}
+```
+
+## /api/v1/raw/prefix-revers
+
+* POST
+
+request
+
+```
+{ 
+    "prefix": xxx,
+    "limit" xx,
+}
+```
+
+response
+
+```
+{
+	"code": number,
+	"msg": string,
+	"data": {
+	"queryID": xxxx
+	"kvs": [{"k":xxx,"v": xxx}]
+	}
+}
+
+```
+
 ## /api/v1/raw/del
 
 * POST
@@ -44,7 +82,7 @@
 }
 ```
 
-## /api/v1/txn
+## /api/v1/txn/opt
 
 * POST
 
@@ -57,9 +95,27 @@
    {"opt": del
     "kvs":[{"k": "xx","v":"xx"},{"k": "xx","v":"xx"},{"k": "xx","v":"xx"}]
    },
-   {"opt": get
+   {"opt": put
     "keys":["xxx","xxx","xxx"]
    },
    ]
+}
+```
+
+## /api/v1/txn/get
+
+```
+{ 
+    "Key": "xxx"  
+}
+```
+
+## /api/v1/txn/scan
+
+```
+{ 
+    "begin": "xxx"  ，
+    "end"："xxx",
+    "limit" xx,
 }
 ```

@@ -31,7 +31,6 @@ impl TiKVHandler {
 // Raw KV operate
 impl TiKVHandler {
     pub async fn raw_put(&self, key: String, val: String) -> tikv_client::Result<()> {
-        println!("invoke put");
         self.client_raw.put(Key::from(key), Value::from(val)).await
     }
 
@@ -63,7 +62,7 @@ impl TiKVHandler {
             .await
     }
 
-    pub async fn raw_prefix_scan(
+    pub async fn raw_scan(
         &self,
         start: String,
         end: String,
@@ -71,11 +70,11 @@ impl TiKVHandler {
     ) -> tikv_client::Result<Vec<KvPair>> {
         let range = start..end;
         self.client_raw.scan(range, limited).await
-        // self.client_raw.scan(range, limited).await.map_err(|e| {
-        //     return KvPairError::OptionError(e.to_string());
-        //     // e
-        // })?
     }
+
+    // raw_prefix
+
+    // raw_prefix_reverse
 }
 
 // Tracnsaction KV operate

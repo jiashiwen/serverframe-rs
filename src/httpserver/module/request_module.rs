@@ -12,3 +12,10 @@ pub enum Option {
     Del,
     Get,
 }
+
+#[derive(Debug, Deserialize)]
+pub struct ReqScan {
+    pub begin: String,
+    pub end: String,
+    pub limited: u32,
+}
