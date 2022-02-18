@@ -102,10 +102,8 @@ fn cmd_match(matches: &ArgMatches) {
     if let Some(c) = matches.value_of("config") {
         set_config_file_path(c.to_string());
         set_config(&get_config_file_path());
-        // init_resources().expect("init resources fail");
     } else {
         set_config("");
-        // init_resources().expect("init resources fail");
     }
 
     if matches.is_present("interact") {

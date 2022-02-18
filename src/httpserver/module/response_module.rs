@@ -22,9 +22,3 @@ where
         Self::new(code, msg, None)
     }
 }
-
-#[derive(Serialize)]
-pub struct User {
-    pub id: u64,
-    pub username: String,
-}

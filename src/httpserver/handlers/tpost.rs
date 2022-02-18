@@ -20,8 +20,8 @@ pub async fn tpost(Json(payload): Json<CreateUser>) -> HandlerResult<User> {
         return Err(err);
     }
     let user = User {
-        id: 1337,
         username: payload.username,
+        password: "".to_string(),
     };
 
     Ok(Json(Response::ok(user)))

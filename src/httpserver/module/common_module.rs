@@ -10,3 +10,14 @@ pub struct KV {
 pub struct Key {
     pub Key: String,
 }
+
+#[derive(Deserialize, Serialize)]
+pub struct Token {
+    pub token: String,
+}
+
+#[derive(Deserialize, Serialize)]
+pub struct User {
+    pub username: String,
+    pub password: String,
+}

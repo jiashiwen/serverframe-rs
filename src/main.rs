@@ -7,6 +7,7 @@ mod errors;
 mod httpserver;
 mod interact;
 mod logger;
+mod privilege;
 mod resources;
 // mod request;
 

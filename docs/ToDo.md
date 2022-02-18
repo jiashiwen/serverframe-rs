@@ -1,24 +1,26 @@
 # ToDo
 
-# 框架部分
+## 框架部分
 
 - [x] 守护进程模式启动
 - [x] stop server
 - [x] axum 日志输出
 - [x] 统一错误处理
 - [ ] http timeout
-- [ ] resources接入
-- [ ] 配置文件处理
+- [x] resources接入
+- [x] 配置文件处理
+- [ ] 登录与拦截
+    - [ ] 多节点登录状态共享
 
-# resource 池化与断链重试
+## resource 池化与断链重试
 
-# rust 插件开发扩展系统功能，待调研
+## rust 插件开发扩展系统功能，待调研
 
-# DSL 设计循序渐进
+## DSL 设计循序渐进
 
-# 性能
+## 性能
 
-# 权限
+## 权限
 
 * 是否可以用websocket 来提高效率
 

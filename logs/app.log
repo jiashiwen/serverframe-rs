@@ -998,3 +998,12 @@
 2022-02-09T15:59:41.957787+08:00 - []
 2022-02-09T15:59:55.008261+08:00 - [KvPair(61, "a"), KvPair(62, "ab"), KvPair(63, "abc")]
 2022-02-09T16:03:54.146395+08:00 - [KvPair(61, "a"), KvPair(62, "ab"), KvPair(63, "abc")]
+2022-02-10T15:50:52.597880+08:00 - TSO stream terminated
+2022-02-10T15:50:52.599002+08:00 - TSO stream terminated
+2022-02-10T15:50:52.599091+08:00 - TSO send termination: Err(Grpc(RpcFinished(Some(RpcStatus { code: 14-UNAVAILABLE, message: "Socket closed", details: [] }))))
+2022-02-10T15:50:52.599172+08:00 - TSO send termination: Err(Grpc(RpcFinished(Some(RpcStatus { code: 14-UNAVAILABLE, message: "Socket closed", details: [] }))))
+2022-02-10T15:50:52.599227+08:00 - TSO receive termination: Ok(())
+2022-02-10T15:50:52.599283+08:00 - TSO receive termination: Ok(())
+2022-02-18T16:43:27.893910+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-02-18T16:43:27.933874+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-02-18T16:47:25.012239+08:00 - httpserver start

@@ -1,5 +1,5 @@
 use crate::httpserver::handlers::{
-    current_config, raw_flushall, raw_get, raw_put, raw_scan, root, tpost,
+    current_config, login, raw_flush, raw_get, raw_put, raw_scan, root, tpost,
 };
 use axum::error_handling::HandleErrorLayer;
 use axum::http::StatusCode;
@@ -8,6 +8,7 @@ use axum::{BoxError, Router};
 use std::thread::current;
 use std::time::Duration;
 use tower::ServiceBuilder;
+use tower_http::auth::RequireAuthorizationLayer;
 use tower_http::{compression::CompressionLayer, trace::TraceLayer};
 
 pub fn router_root() -> Router {
@@ -21,10 +22,11 @@ pub fn router_root() -> Router {
         .layer(tower::timeout::TimeoutLayer::new(Duration::from_secs(2)))
         // .layer(TraceLayer::new_for_http())
         // .timeout(Duration::from_secs(2))
-        // .layer(RequireAuthorizationLayer::basic("test", "passwd"))
+        .layer(RequireAuthorizationLayer::basic("test", "passwd"))
         .into_inner();
 
     let root = Router::new()
+        .route("/login", post(login))
         .route("/health", get(root))
         .route("/health", post(root));
 
@@ -32,7 +34,7 @@ pub fn router_root() -> Router {
         .route("/v1/tpost", post(tpost))
         .route("/v1/raw/put", post(raw_put))
         .route("/v1/raw/get", post(raw_get))
-        .route("/v1/raw/flushall", post(raw_flushall))
+        .route("/v1/raw/flushall", post(raw_flush))
         .route("/v1/raw/scan", post(raw_scan))
         .route("/v1/currentconfig", post(current_config))
         .layer(middleware_stack);

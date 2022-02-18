@@ -40,7 +40,7 @@ pub async fn raw_get(Json(payload): Json<Key>) -> HandlerResult<String> {
     }
 }
 
-pub async fn raw_flushall() -> HandlerResult<()> {
+pub async fn raw_flush() -> HandlerResult<()> {
     let result = s_raw_flush_all().await;
     match result {
         Ok(()) => Ok(Json(Response::ok(()))),
