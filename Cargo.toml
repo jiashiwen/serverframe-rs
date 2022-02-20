@@ -38,6 +38,7 @@ http-body = "0.4.4"
 rust-crypto = "^0.2"
 chrono = "0.4"
 base64 = "0.13.0"
+dashmap = "5.1.0"
 
 [[example]]
 name = "casbinsample"

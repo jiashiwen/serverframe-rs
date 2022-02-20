@@ -1,20 +1,21 @@
 use anyhow::Result;
-use base64;
 use casbin::prelude::*;
 
+use dashmap::DashMap;
 use serde::de::Unexpected::Str;
 use std::collections::HashMap;
 use std::string::String;
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let mut base = base64::encode("0");
-    println!("{}", base);
+    let map = DashMap::new();
+    map.insert("a", "b");
+    map.insert("c", "b");
+    map.insert("c", "c");
+    let a = *map.get("a").unwrap();
 
-    let decodestr = base64::decode(base).unwrap();
-
-    let str = String::from_utf8(decodestr);
-    println!("{:?}", str);
+    println!("{:?}", map);
+    println!("a is {}", a);
     let mut e = Enforcer::new(
         "examples/rbac_with_domains_model.conf",
         "examples/rbac_with_domains_policy.csv",

@@ -1,7 +1,7 @@
 use crate::httpserver::exception::{AppError, AppErrorType};
 use crate::httpserver::handlers::HandlerResult;
 use crate::httpserver::module::{Response, Token, User};
-use crate::privilege::get_user_by_name;
+use crate::privilege::{gen_token, get_user_by_name};
 use axum::Json;
 
 pub async fn login(Json(payload): Json<User>) -> HandlerResult<Token> {
@@ -10,7 +10,7 @@ pub async fn login(Json(payload): Json<User>) -> HandlerResult<Token> {
     match user {
         Ok(u) => {
             if payload.password.eq(u.password.as_str()) {
-                let t = u.gen_token();
+                let t = gen_token(u);
                 return match t {
                     Ok(str) => {
                         let token = Token { token: str };
