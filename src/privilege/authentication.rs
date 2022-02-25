@@ -58,19 +58,3 @@ pub async fn add_policy(p: Vec<String>) -> Result<bool> {
         .addpolice(p)
         .await
 }
-
-#[tokio::main]
-async fn main() -> Result<()> {
-    let args = vec![
-        "jsw".to_string(),
-        "domain".to_string(),
-        "data2".to_string(),
-        "read".to_string(),
-    ];
-
-    add_policy(args.clone()).await;
-
-    let r = enfoce(args).await;
-    println!("{:?}", r);
-    Ok(())
-}

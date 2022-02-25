@@ -1,11 +1,13 @@
 use crate::httpserver::handlers::{
-    current_config, login, raw_flush, raw_get, raw_put, raw_scan, root, tpost,
+    current_config, get_user, login, raw_flush, raw_get, raw_put, raw_scan, remove_user, root,
+    user_create,
 };
+use crate::httpserver::middleware::MyAuth;
 use axum::error_handling::HandleErrorLayer;
 use axum::http::StatusCode;
 use axum::routing::{get, post};
 use axum::{BoxError, Router};
-use std::thread::current;
+use std::marker::PhantomData;
 use std::time::Duration;
 use tower::ServiceBuilder;
 use tower_http::auth::RequireAuthorizationLayer;
@@ -22,7 +24,9 @@ pub fn router_root() -> Router {
         .layer(tower::timeout::TimeoutLayer::new(Duration::from_secs(2)))
         // .layer(TraceLayer::new_for_http())
         // .timeout(Duration::from_secs(2))
-        .layer(RequireAuthorizationLayer::basic("test", "passwd"))
+        .layer(RequireAuthorizationLayer::custom(MyAuth {
+            _ty: PhantomData,
+        }))
         .into_inner();
 
     let root = Router::new()
@@ -30,17 +34,21 @@ pub fn router_root() -> Router {
         .route("/health", get(root))
         .route("/health", post(root));
 
+    let user = Router::new()
+        .route("/create", post(user_create))
+        .route("/get", post(get_user))
+        .route("/remove", post(remove_user))
+        .layer(middleware_stack.clone());
+
     let api = Router::new()
-        .route("/v1/tpost", post(tpost))
         .route("/v1/raw/put", post(raw_put))
         .route("/v1/raw/get", post(raw_get))
         .route("/v1/raw/flushall", post(raw_flush))
         .route("/v1/raw/scan", post(raw_scan))
         .route("/v1/currentconfig", post(current_config))
         .layer(middleware_stack);
-    return root.nest("/api", api);
-    // let router = root.merge(api);
-    // return router;
+
+    return root.nest("/user", user).nest("/api", api);
 }
 
 async fn handle_timeout_error(err: BoxError) -> (StatusCode, String) {

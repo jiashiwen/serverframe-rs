@@ -21,3 +21,13 @@ pub struct User {
     pub username: String,
     pub password: String,
 }
+
+#[derive(Deserialize, Serialize)]
+pub struct UserName {
+    pub name: String,
+}
+
+#[derive(Deserialize, Serialize)]
+pub struct ID {
+    pub id: String,
+}

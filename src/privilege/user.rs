@@ -4,10 +4,8 @@ use base64;
 use chrono::Local;
 use crypto::digest::Digest;
 use crypto::sha2::Sha256;
-use dashmap::mapref::one::Ref;
 use dashmap::DashMap;
 use serde::Serialize;
-use std::borrow::Borrow;
 use std::collections::HashMap;
 use std::sync::RwLock;
 
@@ -70,15 +68,10 @@ lazy_static::lazy_static! {
 // 若没有，生成token存入GLOBAL_LOGIN_STATUS和GLOBAL_TOKEN_MAP
 pub fn gen_token(user: User) -> Result<String> {
     let id = user.id.clone();
-    // let login_status_reader = GLOBAL_LOGIN_STATUS.read().map_err(|e| {
-    //     return GlobalError::from_err(e.to_string(), GlobalErrorType::UnknowErr);
-    // })?;
-    // let token = login_status_reader.get(&id);
     let token = GLOBAL_LOGIN_STATUS.get(&id);
 
     match token {
         None => {
-            println!("result is None");
             let dt = Local::now();
             let seed = format!("{}{}{}", user.name, user.password, dt.timestamp_millis());
             let mut hasher = Sha256::new();
@@ -91,6 +84,14 @@ pub fn gen_token(user: User) -> Result<String> {
             let r = t.value().clone();
             Ok(r)
         }
+    }
+}
+
+pub fn get_user_id_from_token(token: String) -> Result<String> {
+    let id = GLOBAL_TOKEN_MAP.get(&token);
+    match id {
+        None => Err(anyhow!("token not exists")),
+        Some(id) => Ok(id.value().clone()),
     }
 }
 

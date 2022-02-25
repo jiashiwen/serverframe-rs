@@ -159,7 +159,7 @@ fn cmd_match(matches: &ArgMatches) {
                                                                                       ";
         println!("{}", banner);
         println!("current pid is:{}", std::process::id());
-        init_resources().expect("init resources fail");
+        // init_resources().expect("init resources fail");
         let rt = tokio::runtime::Runtime::new().unwrap();
         let (tx, rx) = tokio::sync::oneshot::channel::<()>();
         let async_req = async {

@@ -1,7 +1,9 @@
 mod config;
 mod login_handler;
 mod rawkv_handler;
+
 mod tpost;
+mod user_handler;
 
 use axum::Json;
 pub use config::current_config;
@@ -11,7 +13,9 @@ pub use rawkv_handler::raw_get;
 pub use rawkv_handler::raw_put;
 pub use rawkv_handler::raw_scan;
 pub use tpost::root;
-pub use tpost::tpost;
+pub use user_handler::get_user;
+pub use user_handler::remove_user;
+pub use user_handler::user_create;
 
 use crate::httpserver::module::Response;
 
