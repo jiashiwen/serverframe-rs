@@ -9,7 +9,6 @@ mod interact;
 mod logger;
 mod privilege;
 mod resources;
-// mod request;
 
 fn main() {
     init_log();

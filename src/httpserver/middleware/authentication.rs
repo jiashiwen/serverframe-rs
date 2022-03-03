@@ -1,9 +1,8 @@
 use crate::privilege::get_user_id_from_token;
-use axum::http::header::ToStrError;
-use axum::http::{header, HeaderValue, Request, Response, StatusCode};
+use axum::http::{header, Request, Response, StatusCode};
 use http_body::Body;
 use std::marker::PhantomData;
-use tower_http::auth::{AuthorizeRequest, RequireAuthorizationLayer};
+use tower_http::auth::AuthorizeRequest;
 
 pub struct MyAuth<ResBody> {
     pub(crate) _ty: PhantomData<fn() -> ResBody>,

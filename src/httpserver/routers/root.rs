@@ -1,6 +1,6 @@
 use crate::httpserver::handlers::{
-    current_config, get_user, login, raw_flush, raw_get, raw_put, raw_scan, remove_user, root,
-    user_create,
+    current_config, get_headers, get_user, login, raw_flush, raw_get, raw_put, raw_scan,
+    remove_user, root, user_create,
 };
 use crate::httpserver::middleware::MyAuth;
 use axum::error_handling::HandleErrorLayer;
@@ -31,6 +31,7 @@ pub fn router_root() -> Router {
 
     let root = Router::new()
         .route("/login", post(login))
+        .route("/gethead", post(get_headers))
         .route("/health", get(root))
         .route("/health", post(root));
 

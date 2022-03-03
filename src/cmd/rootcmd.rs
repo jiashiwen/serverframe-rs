@@ -4,7 +4,6 @@ use crate::commons::SubCmd;
 use crate::configure::{generate_default_config, set_config_file_path};
 use crate::configure::{get_config, get_config_file_path, get_current_config_yml, set_config};
 use crate::resources::init_resources;
-use crate::resources::{get_tikv_handler, set_tikv};
 use crate::{httpserver, interact};
 
 use clap::{App, AppSettings, Arg, ArgMatches};
@@ -159,7 +158,7 @@ fn cmd_match(matches: &ArgMatches) {
                                                                                       ";
         println!("{}", banner);
         println!("current pid is:{}", std::process::id());
-        // init_resources().expect("init resources fail");
+        init_resources().expect("init resources fail");
         let rt = tokio::runtime::Runtime::new().unwrap();
         let (tx, rx) = tokio::sync::oneshot::channel::<()>();
         let async_req = async {
@@ -199,24 +198,15 @@ fn cmd_match(matches: &ArgMatches) {
     }
 
     if let Some(config) = matches.subcommand_matches("config") {
-        if let Some(show) = config.subcommand_matches("show") {
-            match show.subcommand_name() {
-                Some("all") => {
-                    println!("config show all");
-                    let yml = get_current_config_yml();
-                    match yml {
-                        Ok(str) => {
-                            println!("{}", str);
-                        }
-                        Err(e) => {
-                            eprintln!("{}", e);
-                        }
-                    }
+        if let Some(_show) = config.subcommand_matches("show") {
+            let yml = get_current_config_yml();
+            match yml {
+                Ok(str) => {
+                    println!("{}", str);
                 }
-                Some("info") => {
-                    println!("config show info");
+                Err(e) => {
+                    eprintln!("{}", e);
                 }
-                _ => {}
             }
         }
 

@@ -1,19 +1,15 @@
 use crate::errors::{GlobalError, GlobalErrorType};
-use crate::httpserver;
-use crate::httpserver::exception::{AppError, AppErrorType};
 use crate::httpserver::module::KV;
 use crate::resources::get_tikv_handler;
 use anyhow::Error;
 use anyhow::Result;
-use futures::TryFutureExt;
-use tikv_client::{IntoOwnedRange, KvPair, Value};
 
 pub async fn s_raw_put(put: KV) -> Result<()> {
     let tikvhandler = get_tikv_handler().await;
     let result = tikvhandler.raw_put(put.Key, put.Value).await;
     match result {
         Ok(_) => Ok({}),
-        Err(e) => Err(anyhow::anyhow!("tikv error")),
+        Err(_e) => Err(anyhow::anyhow!("tikv error")),
     }
 }
 

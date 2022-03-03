@@ -2,8 +2,39 @@ use crate::httpserver::exception::{AppError, AppErrorType};
 use crate::httpserver::handlers::HandlerResult;
 use crate::httpserver::module::{Response, User, UserName, ID};
 use crate::httpserver::service::{s_get_user, s_remove_user, s_user_create};
-use crate::privilege::User as PrivilegeUser;
+use crate::privilege::{ActionType, ObjType, Policy, User as PrivilegeUser};
+
+use crate::httpserver::handlers::authhandler::auth;
+use axum::http::HeaderMap;
 use axum::Json;
+
+pub async fn get_headers(Json(id): Json<ID>, hm: HeaderMap) -> HandlerResult<()> {
+    let p = Policy::new(
+        "".to_string(),
+        "global".to_string(),
+        ObjType::User,
+        ActionType::Create,
+    );
+    let ok = auth(p, hm).await;
+
+    match ok {
+        Ok(ok) => {
+            if ok {
+                println!("{:?}", id);
+            }
+        }
+        Err(e) => {
+            let err = AppError {
+                message: Some(e.to_string()),
+                cause: None,
+                error_type: AppErrorType::UnknowErr,
+            };
+            return Err(err);
+        }
+    }
+
+    Ok(Json(Response::ok(())))
+}
 
 pub async fn user_create(Json(u): Json<User>) -> HandlerResult<()> {
     let r = s_user_create(u);

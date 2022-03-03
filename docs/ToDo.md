@@ -9,7 +9,8 @@
 - [ ] http timeout
 - [x] resources接入
 - [x] 配置文件处理
-- [ ] 登录与拦截
+- [ ] 登录
+    - [x] http拦截
     - [ ] 多节点登录状态共享
 
 ## resource 池化与断链重试

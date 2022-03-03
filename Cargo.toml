@@ -24,7 +24,7 @@ anyhow = "1.0.45"
 futures = "0.3.17"
 fork = "0.1"
 sysinfo = "0.21.2"
-axum = "0.4.4"
+axum = { version = "0.4.6", features = ["default", "headers"] }
 axum-debug = "0.3.2"
 tower-http = { version = "0.2", features = ["trace", "compression-full", "auth"] }
 tower = { version = "0.4.11", features = ["timeout"] }
@@ -40,6 +40,7 @@ chrono = "0.4"
 base64 = "0.13.0"
 dashmap = "5.1.0"
 futures-locks = "0.7.0"
+rust-embed = "6.3.0"
 
 [[example]]
 name = "casbinsample"

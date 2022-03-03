@@ -1,6 +1,5 @@
-// use crate::httpserver::exception::{AppError, AppErrorType};
 use crate::httpserver::handlers::HandlerResult;
-use crate::httpserver::module::{Response, User};
+use crate::httpserver::module::Response;
 use axum::Json;
 use serde_json::{json, Value};
 

@@ -1,11 +1,8 @@
 use crate::configure::get_config;
-use crate::errors::{GlobalError, GlobalErrorType};
 use crate::resources::tikv::TiKVHandler;
 use anyhow::Result;
 use async_once::AsyncOnce;
-use log::info;
-use std::borrow::{Borrow, BorrowMut};
-use std::sync::{Mutex, MutexGuard};
+use std::sync::Mutex;
 
 lazy_static::lazy_static! {
     static ref GLOBAL_PD_ENDPOINT: Mutex<Vec<String>> = Mutex::new(vec![]);

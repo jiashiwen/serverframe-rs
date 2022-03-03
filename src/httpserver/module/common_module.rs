@@ -16,7 +16,7 @@ pub struct Token {
     pub token: String,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct User {
     pub username: String,
     pub password: String,
@@ -27,7 +27,7 @@ pub struct UserName {
     pub name: String,
 }
 
-#[derive(Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct ID {
     pub id: String,
 }

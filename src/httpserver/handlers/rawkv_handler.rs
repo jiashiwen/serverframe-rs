@@ -2,11 +2,7 @@ use crate::httpserver::exception::{AppError, AppErrorType};
 use crate::httpserver::handlers::HandlerResult;
 use crate::httpserver::module::{Key, ReqScan, Response, KV};
 use crate::httpserver::service::{s_raw_flush_all, s_raw_get, s_raw_put, s_raw_scan};
-use crate::resources::get_tikv_handler;
-use anyhow::Result;
 use axum::Json;
-use axum_debug::debug_handler;
-use serde_json::{json, Map, Value};
 
 #[axum_debug::debug_handler]
 pub async fn raw_put(Json(payload): Json<KV>) -> HandlerResult<()> {
