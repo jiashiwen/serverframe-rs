@@ -15,7 +15,7 @@ pub async fn get_headers(Json(id): Json<ID>, hm: HeaderMap) -> HandlerResult<()>
         ObjType::User,
         ActionType::Create,
     );
-    let ok = auth(p, hm).await;
+    let ok = auth("global".to_string(), ObjType::User, ActionType::Create, hm).await;
 
     match ok {
         Ok(ok) => {
