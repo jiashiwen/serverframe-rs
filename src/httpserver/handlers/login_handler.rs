@@ -1,7 +1,8 @@
 use crate::httpserver::exception::{AppError, AppErrorType};
 use crate::httpserver::handlers::HandlerResult;
 use crate::httpserver::module::{Response, Token, User};
-use crate::privilege::{gen_token, get_user_by_name};
+use crate::privilege::{gen_token, get_user_by_name, token_remove};
+use axum::http::HeaderMap;
 use axum::Json;
 
 pub async fn login(Json(payload): Json<User>) -> HandlerResult<Token> {
@@ -35,6 +36,24 @@ pub async fn login(Json(payload): Json<User>) -> HandlerResult<Token> {
                 error_type: AppErrorType::UnknowErr,
             };
             return Err(err);
+        }
+    }
+}
+
+pub async fn logout(hm: HeaderMap) -> HandlerResult<()> {
+    let auth = hm.get("authorization");
+    match auth {
+        None => {
+            let err = AppError {
+                message: Some("no authorization".to_string()),
+                cause: None,
+                error_type: AppErrorType::UnknowErr,
+            };
+            return Err(err);
+        }
+        Some(val) => {
+            token_remove(val.to_str().unwrap().to_string());
+            Ok(Json(Response::ok(())))
         }
     }
 }

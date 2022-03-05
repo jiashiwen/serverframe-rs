@@ -9,14 +9,7 @@ use axum::http::HeaderMap;
 use axum::Json;
 
 pub async fn get_headers(Json(id): Json<ID>, hm: HeaderMap) -> HandlerResult<()> {
-    let p = Policy::new(
-        "".to_string(),
-        "global".to_string(),
-        ObjType::User,
-        ActionType::Create,
-    );
     let ok = auth("global".to_string(), ObjType::User, ActionType::Create, hm).await;
-
     match ok {
         Ok(ok) => {
             if ok {

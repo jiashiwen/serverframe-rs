@@ -1,9 +1,10 @@
 use crate::errors::{GlobalError, GlobalErrorType};
-use anyhow::{anyhow, Result};
+use anyhow::{anyhow, Error, Result};
 use base64;
 use chrono::Local;
 use crypto::digest::Digest;
 use crypto::sha2::Sha256;
+use dashmap::mapref::one::Ref;
 use dashmap::DashMap;
 use serde::Serialize;
 use std::collections::HashMap;
@@ -70,21 +71,21 @@ pub fn gen_token(user: User) -> Result<String> {
     let id = user.id.clone();
     let token = GLOBAL_LOGIN_STATUS.get(&id);
 
-    match token {
+    return match token {
         None => {
             let dt = Local::now();
             let seed = format!("{}{}{}", user.name, user.password, dt.timestamp_millis());
             let mut hasher = Sha256::new();
             hasher.input_str(seed.as_str());
             let token = hasher.result_str();
-            token_store(id.clone(), token.clone()).unwrap();
+            token_store(id.clone(), token.clone())?;
             Ok(token)
         }
         Some(t) => {
             let r = t.value().clone();
             Ok(r)
         }
-    }
+    };
 }
 
 pub fn get_user_id_from_token(token: String) -> Result<String> {
@@ -99,6 +100,26 @@ pub fn token_store(userid: String, token: String) -> Result<()> {
     GLOBAL_LOGIN_STATUS.insert(userid.clone(), token.clone());
     GLOBAL_TOKEN_MAP.insert(token.clone(), userid.clone());
     Ok(())
+}
+
+pub fn token_remove(token: String) -> Result<()> {
+    let t = token.clone();
+    let id = {
+        let opt = GLOBAL_TOKEN_MAP.get(token.as_str());
+        match opt {
+            None => Err(anyhow!("")),
+            Some(pair) => Ok(pair.value().to_string().clone()),
+        }
+    };
+
+    return match id {
+        Ok(idstr) => {
+            GLOBAL_TOKEN_MAP.remove(&*t);
+            GLOBAL_LOGIN_STATUS.remove(&*idstr);
+            Ok(())
+        }
+        Err(e) => Err(e),
+    };
 }
 
 pub fn create_user(name: String, password: String) -> Result<()> {

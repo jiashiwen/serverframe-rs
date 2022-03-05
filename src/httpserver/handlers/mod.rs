@@ -9,6 +9,7 @@ mod user_handler;
 use axum::Json;
 pub use config::current_config;
 pub use login_handler::login;
+pub use login_handler::logout;
 pub use rawkv_handler::raw_flush;
 pub use rawkv_handler::raw_get;
 pub use rawkv_handler::raw_put;

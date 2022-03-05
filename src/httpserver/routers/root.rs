@@ -1,5 +1,5 @@
 use crate::httpserver::handlers::{
-    current_config, get_headers, get_user, login, raw_flush, raw_get, raw_put, raw_scan,
+    current_config, get_headers, get_user, login, logout, raw_flush, raw_get, raw_put, raw_scan,
     remove_user, root, user_create,
 };
 use crate::httpserver::middleware::MyAuth;
@@ -32,6 +32,7 @@ pub fn router_root() -> Router {
     let root = Router::new()
         .route("/login", post(login))
         .route("/gethead", post(get_headers))
+        .route("/logout", get(logout))
         .route("/health", get(root))
         .route("/health", post(root));
 

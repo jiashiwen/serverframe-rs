@@ -17,5 +17,6 @@ pub use user::get_user_by_id;
 pub use user::get_user_by_name;
 pub use user::get_user_id_from_token;
 pub use user::remove_user;
+pub use user::token_remove;
 pub use user::user_exist;
 pub use user::User;
