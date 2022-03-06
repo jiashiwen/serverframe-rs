@@ -1,10 +1,10 @@
 use crate::errors::{GlobalError, GlobalErrorType};
-use anyhow::{anyhow, Error, Result};
+use anyhow::{anyhow, Result};
 use base64;
 use chrono::Local;
 use crypto::digest::Digest;
 use crypto::sha2::Sha256;
-use dashmap::mapref::one::Ref;
+
 use dashmap::DashMap;
 use serde::Serialize;
 use std::collections::HashMap;
