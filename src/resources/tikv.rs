@@ -1,3 +1,4 @@
+use futures::StreamExt;
 use tikv_client::{IntoOwnedRange, Key, KvPair, RawClient, TransactionClient, Value};
 
 pub struct TiKVHandler {
@@ -78,51 +79,60 @@ impl TiKVHandler {
 }
 
 // Tracnsaction KV operate
-// impl TiKVHandler {
-//     pub async fn txn_put(&self, key: String, val: String) -> tikv_client::Result<()> {
-//         println!("invoke put");
-//         self.client_txn.put(Key::from(key), Value::from(val)).await
-//     }
-//
-//     pub async fn txn_remove(&self, key: String) -> tikv_client::Result<()> {
-//         self.client_txn.delete(Key::from(key)).await
-//     }
-//
-//     pub async fn txn_remove_all(&self) -> tikv_client::Result<()> {
-//         let range = "".."";
-//         self.client_txn.delete_range(range.into_owned()).await
-//     }
-//
-//     pub async fn txn_get(&self, key: String) -> tikv_client::Result<Option<Value>> {
-//         self.client_txn.get(key.to_owned()).await
-//     }
-//
-//     pub async fn txn_get_ttl_sec(&self, key: String) -> tikv_client::Result<Option<u64>> {
-//         self.client_txn.get_key_ttl_secs(key.to_owned()).await
-//     }
-//
-//     pub async fn txn_put_with_ttl(
-//         &self,
-//         key: String,
-//         val: String,
-//         ttl: u64,
-//     ) -> tikv_client::Result<()> {
-//         self.client_txn
-//             .put_with_ttl(Key::from(key), Value::from(val.as_str()), ttl)
-//             .await
-//     }
-//
-//     pub async fn txn_prefix_scan(
-//         &self,
-//         start: String,
-//         end: String,
-//         limited: u32,
-//     ) -> tikv_client::Result<Vec<KvPair>> {
-//         let range = start..end;
-//         self.client_txn.scan(range, limited).await
-//         // self.client_raw.scan(range, limited).await.map_err(|e| {
-//         //     return KvPairError::OptionError(e.to_string());
-//         //     // e
-//         // })?
-//     }
-// }
+impl TiKVHandler {
+    pub async fn txn_get(&self, key: String) -> tikv_client::Result<Option<Value>> {
+        let mut txn = self.client_txn.begin_optimistic().await?;
+        txn.get(key).await
+    }
+    pub async fn txn_put(&self, key: String, val: String) -> tikv_client::Result<()> {
+        let mut txn = self.client_txn.begin_optimistic().await?;
+        txn.put(key, val).await?;
+        let r = txn.commit().await;
+        match r {
+            Err(e) => Err(e),
+            Ok(ok) => {
+                Ok(())
+            }
+        }
+    }
+
+    // pub async fn txn_remove(&self, key: String) -> tikv_client::Result<()> {
+    //     self.client_txn.delete(Key::from(key)).await
+    // }
+    //
+    // pub async fn txn_remove_all(&self) -> tikv_client::Result<()> {
+    //     let range = "".."";
+    //     self.client_txn.delete_range(range.into_owned()).await
+    // }
+
+
+    //
+    // pub async fn txn_get_ttl_sec(&self, key: String) -> tikv_client::Result<Option<u64>> {
+    //     self.client_txn.get_key_ttl_secs(key.to_owned()).await
+    // }
+    //
+    // pub async fn txn_put_with_ttl(
+    //     &self,
+    //     key: String,
+    //     val: String,
+    //     ttl: u64,
+    // ) -> tikv_client::Result<()> {
+    //     self.client_txn
+    //         .put_with_ttl(Key::from(key), Value::from(val.as_str()), ttl)
+    //         .await
+    // }
+    //
+    // pub async fn txn_prefix_scan(
+    //     &self,
+    //     start: String,
+    //     end: String,
+    //     limited: u32,
+    // ) -> tikv_client::Result<Vec<KvPair>> {
+    //     let range = start..end;
+    //     self.client_txn.scan(range, limited).await
+    //     // self.client_raw.scan(range, limited).await.map_err(|e| {
+    //     //     return KvPairError::OptionError(e.to_string());
+    //     //     // e
+    //     // })?
+    // }
+}

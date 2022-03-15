@@ -1115,3 +1115,180 @@
 2022-03-05T12:09:37.906830+08:00 - httpserver start
 2022-03-05T12:11:15.704326+08:00 - httpserver start
 2022-03-05T12:31:20.817126+08:00 - httpserver start
+2022-03-08T09:10:42.213086+08:00 - connect to rpc server at endpoint: "114.67.120.120:2379"
+2022-03-08T09:10:42.248058+08:00 - PD endpoint 114.67.120.120:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-03-08T09:32:02.598051+08:00 - httpserver start
+2022-03-08T09:41:58.483448+08:00 - httpserver start
+2022-03-08T09:49:21.268450+08:00 - httpserver start
+2022-03-08T10:03:55.033705+08:00 - httpserver start
+2022-03-08T10:25:33.046108+08:00 - httpserver start
+2022-03-12T07:58:41.742862+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-12T07:58:41.937922+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-12T07:58:41.938195+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-12T07:58:42.131064+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-12T07:58:42.315303+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-12T07:58:42.374696+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-12T07:58:42.374799+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-12T07:58:42.435420+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-12T07:58:42.616595+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-12T07:58:42.802964+08:00 - httpserver start
+2022-03-12T07:59:23.561802+08:00 - handle raw_put result: Ok(())
+2022-03-12T22:14:07.667389+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-12T22:14:07.884123+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-12T22:14:07.884248+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-12T22:14:08.076895+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-12T22:14:08.263273+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-12T22:14:08.326906+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-12T22:14:08.326992+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-12T22:14:08.396073+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-12T22:14:08.597185+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-12T22:14:08.798314+08:00 - httpserver start
+2022-03-14T11:00:54.969582+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:00:55.287805+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:00:55.287953+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:00:55.596249+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:00:55.908506+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:00:56.012811+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:00:56.012901+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:00:56.120326+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:00:56.431468+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:01:17.643748+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:01:17.963783+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:01:17.963915+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:01:18.278467+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:01:18.588884+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:01:18.691991+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:01:18.692077+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:01:18.798480+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:01:19.109228+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:01:19.416751+08:00 - httpserver start
+2022-03-14T11:33:56.454995+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:35:41.693132+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:35:41.999155+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:35:41.999279+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:35:42.296516+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:35:42.617163+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:35:42.720050+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:35:42.720163+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:35:42.823005+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:35:43.136988+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:35:43.452330+08:00 - httpserver start
+2022-03-14T11:36:01.968725+08:00 - handle raw_put result: Ok(())
+2022-03-14T11:36:08.462520+08:00 - handle raw_put result: Ok(())
+2022-03-14T11:36:22.746620+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:36:23.073622+08:00 - handle raw_put result: Ok(())
+2022-03-14T11:48:17.792089+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:48:18.106297+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:48:18.106440+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:48:18.420460+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:48:18.733994+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:48:18.932765+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:48:18.932869+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:48:19.038645+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:48:19.357659+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:48:19.984370+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:48:26.999137+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:48:27.310545+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:48:27.310705+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:48:27.613222+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:48:27.919259+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:48:28.024875+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:48:28.024975+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:48:28.125103+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:48:28.427551+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:48:29.195433+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:49:01.807111+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:49:02.134673+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:49:02.134816+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:49:02.446991+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:49:02.754433+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:49:02.858933+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:49:02.859027+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:49:02.974146+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:49:03.284185+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:49:03.908282+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:50:33.809896+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:50:34.127452+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:50:34.127588+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:50:34.450820+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:50:34.759555+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T11:50:34.863419+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T11:50:34.863510+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:50:34.967819+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T11:50:35.355870+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:50:35.971305+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T11:50:36.283480+08:00 - httpserver start
+2022-03-14T12:15:14.221108+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T12:15:14.223338+08:00 - PD endpoint 13.115.217.51:2379 failed to respond: Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-03-14T12:15:29.279116+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T12:15:29.579994+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T12:15:29.580137+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:15:29.888134+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:15:30.199436+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T12:15:30.305533+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T12:15:30.305631+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:15:30.410814+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:15:30.730232+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T12:15:31.345512+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T12:15:31.659492+08:00 - httpserver start
+2022-03-14T12:16:12.683608+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:13.790817+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:14.079006+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:14.354085+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:14.881829+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:15.516765+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:15.711650+08:00 - handle raw_put result: Err(GlobalError { message: None, cause: Some("Multiple key errors: [KeyError(KeyError { locked: None, retryable: \"Error(Txn(Error(Mvcc(Error(WriteConflict { start_ts: TimeStamp(431811821656342529), conflict_start_ts: TimeStamp(431811821591068673), conflict_commit_ts: TimeStamp(431811821656342530), key: [99], primary: [99] })))))\", abort: \"\", conflict: Some(WriteConflict { start_ts: 431811821656342529, conflict_ts: 431811821591068673, key: [99], primary: [99], conflict_commit_ts: 431811821656342530 }), already_exist: None, deadlock: None, commit_ts_expired: None, txn_not_found: None, commit_ts_too_large: None, assertion_failed: None })]"), error_type: UnknowErr })
+2022-03-14T12:16:16.061964+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:16.660569+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:17.813228+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:18.854179+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:19.878505+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:20.273289+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:20.280561+08:00 - handle raw_put result: Err(GlobalError { message: None, cause: Some("Multiple key errors: [KeyError(KeyError { locked: None, retryable: \"Error(Txn(Error(Mvcc(Error(WriteConflict { start_ts: TimeStamp(431811822796931073), conflict_start_ts: TimeStamp(431811822849097729), conflict_commit_ts: TimeStamp(431811822901526529), key: [99], primary: [99] })))))\", abort: \"\", conflict: Some(WriteConflict { start_ts: 431811822796931073, conflict_ts: 431811822849097729, key: [99], primary: [99], conflict_commit_ts: 431811822901526529 }), already_exist: None, deadlock: None, commit_ts_expired: None, txn_not_found: None, commit_ts_too_large: None, assertion_failed: None })]"), error_type: UnknowErr })
+2022-03-14T12:16:20.867013+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:16:21.034405+08:00 - handle raw_put result: Err(GlobalError { message: None, cause: Some("Multiple key errors: [KeyError(KeyError { locked: None, retryable: \"Error(Txn(Error(Mvcc(Error(WriteConflict { start_ts: TimeStamp(431811823045705729), conflict_start_ts: TimeStamp(431811823006384129), conflict_commit_ts: TimeStamp(431811823058812929), key: [99], primary: [99] })))))\", abort: \"\", conflict: Some(WriteConflict { start_ts: 431811823045705729, conflict_ts: 431811823006384129, key: [99], primary: [99], conflict_commit_ts: 431811823058812929 }), already_exist: None, deadlock: None, commit_ts_expired: None, txn_not_found: None, commit_ts_too_large: None, assertion_failed: None })]"), error_type: UnknowErr })
+2022-03-14T12:16:35.786746+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:17:08.896740+08:00 - TSO stream terminated
+2022-03-14T12:17:08.896823+08:00 - TSO stream terminated
+2022-03-14T12:17:08.896892+08:00 - TSO send termination: Err(Grpc(RpcFinished(Some(RpcStatus { code: 14-UNAVAILABLE, message: "keepalive watchdog timeout", details: [] }))))
+2022-03-14T12:17:08.896978+08:00 - TSO send termination: Err(Grpc(RpcFinished(Some(RpcStatus { code: 14-UNAVAILABLE, message: "keepalive watchdog timeout", details: [] }))))
+2022-03-14T12:17:08.897048+08:00 - TSO receive termination: Ok(())
+2022-03-14T12:17:08.897095+08:00 - TSO receive termination: Ok(())
+2022-03-14T12:17:11.779256+08:00 - updating pd client
+2022-03-14T12:17:11.779366+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:17:11.780628+08:00 - failed to connect to http://13.115.217.51:2379, Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-03-14T12:17:12.785617+08:00 - updating pd client
+2022-03-14T12:17:12.785740+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:17:12.786944+08:00 - failed to connect to http://13.115.217.51:2379, Grpc(RpcFailure(RpcStatus { code: 14-UNAVAILABLE, message: "failed to connect to all addresses", details: [] }))
+2022-03-14T12:17:20.961685+08:00 - updating pd client
+2022-03-14T12:17:20.961762+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:17:21.283231+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:17:21.603155+08:00 - updating PD client done, spent 641.343436ms
+2022-03-14T12:17:22.018885+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:18:07.557076+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T12:18:07.878005+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T12:18:07.878157+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:18:08.200045+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:18:08.516092+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-14T12:18:08.621894+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-14T12:18:08.622001+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:18:08.729291+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:18:09.047180+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T12:18:09.698339+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-14T12:18:10.031384+08:00 - httpserver start
+2022-03-14T12:18:52.360406+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:23:29.296056+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:23:29.565270+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:23:30.525144+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:23:43.499971+08:00 - TSO stream terminated
+2022-03-14T12:23:43.500038+08:00 - TSO stream terminated
+2022-03-14T12:23:43.500097+08:00 - TSO send termination: Err(Grpc(RpcFinished(Some(RpcStatus { code: 14-UNAVAILABLE, message: "keepalive watchdog timeout", details: [] }))))
+2022-03-14T12:23:43.500140+08:00 - TSO send termination: Err(Grpc(RpcFinished(Some(RpcStatus { code: 14-UNAVAILABLE, message: "keepalive watchdog timeout", details: [] }))))
+2022-03-14T12:23:43.500176+08:00 - TSO receive termination: Ok(())
+2022-03-14T12:23:43.500205+08:00 - TSO receive termination: Ok(())
+2022-03-14T12:23:51.053912+08:00 - updating pd client
+2022-03-14T12:23:51.053997+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:23:51.444259+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-14T12:23:51.804099+08:00 - updating PD client done, spent 750.053138ms
+2022-03-14T12:23:52.271067+08:00 - handle raw_put result: Ok(())
+2022-03-14T12:28:12.673027+08:00 - handle raw_put result: Ok(())

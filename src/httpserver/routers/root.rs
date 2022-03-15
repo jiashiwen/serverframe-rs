@@ -1,7 +1,4 @@
-use crate::httpserver::handlers::{
-    current_config, get_headers, get_user, login, logout, raw_flush, raw_get, raw_put, raw_scan,
-    remove_user, root, user_create,
-};
+use crate::httpserver::handlers::{current_config, get_headers, get_user, login, logout, raw_flush, raw_get, raw_put, raw_scan, remove_user, root, txn_put, user_create};
 use crate::httpserver::middleware::MyAuth;
 use axum::error_handling::HandleErrorLayer;
 use axum::http::StatusCode;
@@ -45,6 +42,8 @@ pub fn router_root() -> Router {
     let api = Router::new()
         .route("/v1/raw/put", post(raw_put))
         .route("/v1/raw/get", post(raw_get))
+        .route("/v1/txn/put", post(txn_put))
+        .route("/v1/txn/get", post(raw_get))
         .route("/v1/raw/flushall", post(raw_flush))
         .route("/v1/raw/scan", post(raw_scan))
         .route("/v1/currentconfig", post(current_config))

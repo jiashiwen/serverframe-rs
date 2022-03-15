@@ -41,11 +41,16 @@ base64 = "0.13.0"
 dashmap = "5.1.0"
 futures-locks = "0.7.0"
 rust-embed = "6.3.0"
+engula-client = "0.3.0"
 
 
 [[example]]
 name = "deadlock"
-path = "examples/deadlock.rs"
+path = "examples/static_deadlock.rs"
+
+[[example]]
+name = "engula"
+path = "examples/engula_resource.rs"
 
 [[example]]
 name = "casbinsample"
@@ -54,6 +59,7 @@ path = "examples/casbin_test.rs"
 [[example]]
 name = "casbinsample2"
 path = "examples/casbin_test2.rs"
+
 [[example]]
 name = "auth"
 path = "examples/customerauth.rs"

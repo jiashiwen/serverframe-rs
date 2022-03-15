@@ -21,13 +21,15 @@ pub fn init_resources() -> Result<()> {
     //配置tikv
     set_tikv(pd);
     //tikv连接初始化
-    let tikvhandler = get_tikv_handler();
+    let rawclient = get_tikv_handler();
     tokio::runtime::Runtime::new().unwrap().block_on(async {
-        tikvhandler.await.raw_get("t".to_string()).await;
+        rawclient.await.raw_get("t".to_string()).await;
     });
-    // tikvhandler.raw_get(key).await.map_err(|e| {
-    //     return GlobalError::from_err(e.to_string(), GlobalErrorType::UnknowErr);
-    // })?;
+    let txnclient = get_tikv_handler();
+    tokio::runtime::Runtime::new().unwrap().block_on(async {
+        txnclient.await.txn_put("1".to_string(), "1".to_string()).await;
+    });
+
     Ok(())
 }
 
