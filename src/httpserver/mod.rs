@@ -4,6 +4,6 @@ mod exception;
 mod handlers;
 mod httpserver;
 mod middleware;
-mod module;
+pub(crate) mod module;
 mod routers;
 mod service;

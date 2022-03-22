@@ -6,6 +6,7 @@ mod authhandler;
 mod handler_root;
 mod handler_user;
 mod handler_txn;
+mod handler_httpquery;
 
 use axum::Json;
 pub use config::current_config;
@@ -21,6 +22,7 @@ pub use handler_user::get_headers;
 pub use handler_user::get_user;
 pub use handler_user::remove_user;
 pub use handler_user::user_create;
+pub use handler_httpquery::baidu;
 
 use crate::httpserver::module::Response;
 

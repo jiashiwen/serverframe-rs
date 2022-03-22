@@ -9,6 +9,7 @@ mod interact;
 mod logger;
 mod privilege;
 mod resources;
+mod httpquerry;
 
 fn main() {
     init_log();

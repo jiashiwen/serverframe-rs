@@ -1,4 +1,4 @@
-use crate::httpserver::handlers::{current_config, get_headers, get_user, login, logout, raw_flush, raw_get, raw_put, raw_scan, remove_user, root, txn_put, user_create};
+use crate::httpserver::handlers::{baidu, current_config, get_headers, get_user, login, logout, raw_flush, raw_get, raw_put, raw_scan, remove_user, root, txn_put, user_create};
 use crate::httpserver::middleware::MyAuth;
 use axum::error_handling::HandleErrorLayer;
 use axum::http::StatusCode;
@@ -49,7 +49,12 @@ pub fn router_root() -> Router {
         .route("/v1/currentconfig", post(current_config))
         .layer(middleware_stack);
 
-    return root.nest("/user", user).nest("/api", api);
+    let httpquery = Router::new()
+        .route("/baidu", get(baidu));
+
+    return root.nest("/user", user)
+        .nest("/api", api)
+        .nest("/query", httpquery);
 }
 
 async fn handle_timeout_error(err: BoxError) -> (StatusCode, String) {

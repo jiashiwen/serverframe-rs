@@ -1292,3 +1292,61 @@
 2022-03-14T12:23:51.804099+08:00 - updating PD client done, spent 750.053138ms
 2022-03-14T12:23:52.271067+08:00 - handle raw_put result: Ok(())
 2022-03-14T12:28:12.673027+08:00 - handle raw_put result: Ok(())
+2022-03-21T19:00:21.959969+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-21T19:00:22.264385+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-21T19:00:22.264580+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-21T19:00:22.571376+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-21T19:00:22.884148+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-21T19:00:22.989013+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-21T19:00:22.989147+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-21T19:00:23.092591+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-21T19:00:23.409342+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-21T19:00:24.036943+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-21T19:00:24.350972+08:00 - httpserver start
+2022-03-22T09:10:39.985691+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-22T09:10:40.299109+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-22T09:10:40.299249+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:10:40.612422+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:10:40.925114+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-22T09:10:41.028524+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-22T09:10:41.028729+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:10:41.131479+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:10:41.446282+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-22T09:10:42.064217+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-22T09:10:42.382780+08:00 - httpserver start
+2022-03-22T09:12:52.895891+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-22T09:12:53.205088+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-22T09:12:53.205282+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:12:53.513911+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:12:53.840178+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-22T09:12:53.946397+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-22T09:12:53.946527+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:12:54.052469+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:12:54.375440+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-22T09:12:55.012022+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-22T09:12:55.329212+08:00 - httpserver start
+2022-03-22T09:17:44.850588+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-22T09:17:45.152090+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-22T09:17:45.152288+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:17:45.447222+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:17:45.766217+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-22T09:17:45.870134+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-22T09:17:45.870243+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:17:45.975915+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T09:17:46.302737+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-22T09:17:46.919268+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-22T09:17:47.234626+08:00 - httpserver start
+2022-03-22T09:17:49.591156+08:00 - error trying to connect: invalid URL, scheme is not http
+2022-03-22T09:17:50.638659+08:00 - error trying to connect: invalid URL, scheme is not http
+2022-03-22T09:17:50.867990+08:00 - error trying to connect: invalid URL, scheme is not http
+2022-03-22T10:21:40.224895+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-22T10:21:40.512463+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-22T10:21:40.512659+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T10:21:40.829237+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T10:21:41.127520+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-22T10:21:41.227298+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-22T10:21:41.227453+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T10:21:41.326279+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-22T10:21:41.628471+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-22T10:21:42.250074+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-22T10:21:42.588668+08:00 - httpserver start
