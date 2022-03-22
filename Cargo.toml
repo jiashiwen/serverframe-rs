@@ -44,7 +44,13 @@ rust-embed = "6.3.0"
 engula-client = "0.3.0"
 hyper = "0.14.17"
 hyper-tls = "0.5.0"
+curl = "0.4.43"
+regex = "1.5.5"
 
+
+[[example]]
+name = "ping"
+path = "examples/ping_sample.rs"
 
 [[example]]
 name = "deadlock"
