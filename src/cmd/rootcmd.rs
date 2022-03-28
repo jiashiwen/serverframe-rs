@@ -13,8 +13,9 @@ use std::borrow::Borrow;
 use std::net::SocketAddr;
 use std::process::Command;
 use std::str::FromStr;
-use std::{env, fs};
+use std::{env, fs, thread};
 use sysinfo::{Pid, ProcessExt, RefreshKind, System, SystemExt};
+use tokio::runtime::Runtime;
 
 lazy_static! {
     static ref CLIAPP: clap::App<'static> = App::new("serverframe-rs")
@@ -159,9 +160,9 @@ fn cmd_match(matches: &ArgMatches) {
         println!("{}", banner);
         println!("current pid is:{}", std::process::id());
         init_resources().expect("init resources fail");
-        let rt = tokio::runtime::Runtime::new().unwrap();
+        // let rt = tokio::runtime::Runtime::new().unwrap();
         let (tx, rx) = tokio::sync::oneshot::channel::<()>();
-        let async_req = async {
+        let async_http_server = async {
             let config = get_config().unwrap();
             let mut addr = config.http.addr;
             let port = config.http.port;
@@ -175,7 +176,13 @@ fn cmd_match(matches: &ArgMatches) {
             let http_handler = http_server.run(rx).await;
             let _http = tokio::join!(http_handler);
         };
-        rt.block_on(async_req);
+        // rt.block_on(async_req);
+
+        let thread_http = thread::spawn(|| {
+            let rt = Runtime::new().unwrap();
+            rt.block_on(async_http_server);
+        });
+        thread_http.join().unwrap();
     }
 
     if let Some(ref _matches) = matches.subcommand_matches("stop") {

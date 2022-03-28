@@ -1,49 +1,86 @@
+use std::fmt;
 use std::process::Command;
 use curl::easy::Easy;
 use curl::Error;
 use std::io::{stdout, Write};
+use std::str::FromStr;
 use regex::{Match, Regex};
+use anyhow::Result;
 
 
 fn main() {
-    // println!("{}", check_ping("www.baidu.com"));
-    let re = Regex::new(r"(?x)
-            ^(?P<login>[^@\s]+)@
-            ([[:word:]]+\.)*
-            [[:word:]]+$
-            ").unwrap();
-    let res = re.captures("I❤email@example.com").and_then(|cap| {
-        cap.name("login").map(|login| login.as_str())
-    });
+
+
+    // let re1 = Regex::new(r"time=(.*) ms").unwrap();
+    //
+    // let res1 = re1.captures("64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=3.643 ms")
+    //     .and_then(|cap| {
+    //         let time = cap.get(0);
+    //         time.map(|t| t.as_str())
+    //     });
+
+
+    let txt = r"PING 127.0.0.1 (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.146 ms
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.123 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.130 ms
+
+--- 127.0.0.1 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.123/0.133/0.146/0.010 msPING 127.0.0.1 (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.146 ms
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.123 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.130 ms
+
+--- 127.0.0.1 ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.123/0.133/0.146/0.010 ms";
+
+    let res = cmd_ping("127.0.0.1");
+    match res {
+        Ok(ref str) => {
+            let time = ping_get_time(str.as_str());
+            if let Some(t) = time {
+                let first_col = t.split(' ').collect::<Vec<&str>>()[0];
+                let number = first_col.split('=').collect::<Vec<&str>>()[1];
+                let f = number.parse::<f32>().unwrap();
+                let digits = format!("{:.2}", f);
+                println!("{:?}", digits);
+            }
+        }
+        Err(ref e) => {
+            eprintln!("{:?}", e);
+        }
+    }
     println!("{:?}", res);
-
-
-//     let re1 = Regex::new(r"^PING\\b # match ping
-// [^(]*\\(([^)]*)\\) # capture IP
-// \\s([^.]*)\\. # capture the bytes of data
-// .*?^(\\d+\\sbytes) # capture bytes
-// .*?icmp_seq=(\\d+) # capture icmp_seq
-// .*?ttl=(\\d+) # capture ttl
-// .*?time=(.*?ms) # capture time
-// .*?(\\d+)\\spackets\\stransmitted
-// .*?(\\d+)\\sreceived
-// .*?(\\d+%)\\spacket\\sloss
-// .*?time\\s(\\d+ms)
-// .*?=\\s([^\\/]*)\\/([^\\/]*)\\/([^\\/]*)\\/(.*?)\\sms").unwrap();
-
-    let re1 = Regex::new(r"time=(.*) ms").unwrap();
-
-    let res1 = re1.captures("64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=3.643 ms")
-        .and_then(|cap| {
-            let time = cap.get(0);
-            time.map(|t| t.as_str())
-        });
-
-    println!("{:?}", res1);
 }
 
 
-fn ping_get_time() {}
+fn ping_get_time(text: &str) -> Option<&str> {
+    let regex = Regex::new(r"time=(.*) ms");
+    return match regex {
+        Ok(re) => {
+            let res = re.captures(text)
+                .and_then(|cap| {
+                    let time = cap.get(0);
+                    time.map(|t| t.as_str())
+                });
+            res
+        }
+        Err(_) => { None }
+    };
+}
+
+fn cmd_ping(addr: &str) -> Result<String> {
+    let cmd = format!("ping {} -c 3 -t 10", addr);
+    let ping_cmd = Command::new("sh").arg("-c")
+        .arg(cmd.as_str()).output()?;
+
+    let str = std::str::from_utf8(&*ping_cmd.stdout).map_err(|e| {
+        anyhow::Error::new(e)
+    })?;
+    Ok(str.to_string())
+}
 
 fn check_ping(addr: &str) -> bool {
     let cmd = format!("ping {} -c 3 -t 10", addr);

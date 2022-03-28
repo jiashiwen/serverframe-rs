@@ -1350,3 +1350,14 @@
 2022-03-22T10:21:41.628471+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
 2022-03-22T10:21:42.250074+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
 2022-03-22T10:21:42.588668+08:00 - httpserver start
+2022-03-28T08:27:14.331017+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-28T08:27:14.639376+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-28T08:27:14.639527+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-28T08:27:14.938766+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-28T08:27:15.245375+08:00 - connect to rpc server at endpoint: "13.115.217.51:2379"
+2022-03-28T08:27:15.349582+08:00 - All PD endpoints are consistent: ["13.115.217.51:2379"]
+2022-03-28T08:27:15.349661+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-28T08:27:15.453959+08:00 - connect to rpc server at endpoint: "http://13.115.217.51:2379"
+2022-03-28T08:27:15.767100+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-28T08:27:16.406181+08:00 - connect to rpc server at endpoint: "13.115.217.51:20160"
+2022-03-28T08:27:16.737969+08:00 - httpserver start
